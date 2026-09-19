@@ -1,0 +1,147 @@
+main {
+    width: 100%;
+    padding: 2rem 0;
+    font-family: 'Hind Vadodara', sans-serif;
+}
+
+.cursos {
+    display: flex;
+    justify-content: left;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.panel-estadisticas {
+    display: flex;
+    justify-content: space-around; /* Distribuye las 3 estadísticas equitativamente */
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 2rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0.5rem 0 #e5e5e5; 
+    margin-bottom: 3rem; 
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-icono {
+    font-size: 2.5rem; 
+}
+
+.stat-info h4 {
+    font-size: 1.6rem;
+    color: #3c3c3c;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.stat-info p {
+    font-size: 1.1rem;
+    color: #afafaf;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+}
+
+.curso-idioma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    flex: 0 0 30%;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5; 
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 0.6rem 0 #e5e5e5; 
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.curso-idioma:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1rem 0 #d8d8d8;
+    border-color: #cdcdcd;
+}
+
+.titulo-del-curso {
+    font-size: 2rem;
+    color: #3c3c3c;
+    margin: 0;
+    text-align: center;  
+}
+
+.img-tarjetas {
+    display: block;
+    width: 65%;
+    max-width: 20rem;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.texto-tarjeta {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    color: #3c3c3c;
+}
+
+.barra-progreso {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    width: 60%;
+    height: 1.2rem;
+    margin: 0;
+    background-color: #cdcdcd;
+    border: solid 0.08rem black;
+    border-radius: 1rem;
+}
+
+.relleno-barra-ingles, .relleno-barra-aleman, .relleno-barra-chino {
+    display: block;
+    margin: 0;
+    height: 100%;
+    background-color: #77e10d;
+    border-radius: 1rem;
+}
+
+.relleno-barra-ingles {
+    width: 70%;
+}
+
+.relleno-barra-aleman {
+    width: 30%;
+}
+
+.boton-tarjeta {
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: rgb(0, 136, 255);
+    padding: 0.8rem;
+    border-radius: 1.5rem;
+    color: white;   
+    font-weight: bold;
+    border: 0.2rem solid rgb(0, 85, 160);
+    box-shadow: 0 0.6rem 0 rgb(0, 85, 160); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.boton-tarjeta:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1rem 0 rgb(0, 66, 124);
+    border-color: rgb(0, 85, 160);
+    cursor: pointer;
+}
