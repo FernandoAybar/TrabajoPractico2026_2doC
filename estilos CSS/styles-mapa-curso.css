@@ -25,17 +25,22 @@
     margin: 0;
 }
 
+.bloque-banderas {
+    white-space: nowrap; 
+    display: inline-block;
+}
+
 .curso-actual-info {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     gap: 2rem;
     width: 100%;
-    background-color: #f1f8ff; 
+    background-color: #f1f8ff;
     border: 0.2rem solid rgb(0, 136, 255);
     border-radius: 2rem;
     padding: 2rem;
-    box-shadow: 0 0.5rem 0 rgb(0, 136, 255);  
+    box-shadow: 0 0.5rem 0 rgb(0, 136, 255);
 }
 
 .curso-actual-info h3 {
@@ -53,7 +58,7 @@
 
 .lecciones-arbol {
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     gap: 2.5rem;
     flex-wrap: wrap;
     width: 100%;
@@ -65,7 +70,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: 1.5rem;
-    flex: 0 0 31.5%; 
+    flex: 0 0 31.5%;
     background-color: white;
     border: 0.2rem solid #e5e5e5;
     border-radius: 2.5rem;
@@ -127,12 +132,12 @@
 
 .relleno-barra-ingles-completado {
     width: 100%;
-    background-color: #77e10d; 
+    background-color: #77e10d;
 }
 
 .relleno-barra-ingles-en-curso {
     width: 40%;
-    background-color: #ff9600; 
+    background-color: #ff9600;
 }
 
 .relleno-barra-ingles-sin-iniciar {
@@ -150,7 +155,7 @@
     border: 0.2rem solid rgb(0, 85, 160);
     box-shadow: 0 0.6rem 0 rgb(0, 85, 160);
     text-transform: uppercase;
-    margin-top: auto; 
+    margin-top: auto;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     width: 80%;
@@ -168,15 +173,15 @@
 }
 
 .leccion-nodo.bloqueada {
-    opacity: 0.6; 
+    opacity: 0.6;
 }
 
 .leccion-nodo.bloqueada .boton-tarjeta {
     background-color: #afafaf;
     border-color: #7a7a7a;
     box-shadow: 0 0.6rem 0 #7a7a7a;
-    pointer-events: none; 
-    cursor: not-allowed; 
+    pointer-events: none;
+    cursor: not-allowed;
 }
 
 .relleno-barra-aleman-completado,
@@ -188,12 +193,12 @@
 
 .relleno-barra-aleman-completado {
     width: 100%;
-    background-color: #77e10d; 
+    background-color: #77e10d;
 }
 
 .relleno-barra-aleman-en-curso {
-    width: 30%; 
-    background-color: #ff9600; 
+    width: 30%;
+    background-color: #ff9600;
 }
 
 .relleno-barra-aleman-sin-iniciar {
@@ -207,8 +212,8 @@
 }
 
 .relleno-barra-chino-en-curso {
-    width: 0%; 
-    background-color: #ff9600; 
+    width: 0%;
+    background-color: #ff9600;
 }
 
 .relleno-barra-chino-sin-iniciar {
@@ -222,12 +227,12 @@
     text-transform: uppercase;
     text-decoration: none;
     color: white;
-    background-color: #ff4b4b; 
+    background-color: #ff4b4b;
     padding: 1rem 2rem;
     border-radius: 1.5rem;
     border: 0.2rem solid #c72c2c;
-    box-shadow: 0 0.4rem 0 #c72c2c; 
-    white-space: nowrap; 
+    box-shadow: 0 0.4rem 0 #c72c2c;
+    white-space: nowrap;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
@@ -241,4 +246,95 @@
 .volver-al-dashboard:active {
     transform: translateY(0.4rem);
     box-shadow: 0 0 0 transparent;
+}
+
+@media (min-width: 481px) and (max-width: 1024px) { /*Query tablet-notebook*/
+    .curso-actual h2 {
+        font-size: 2rem;
+    }
+
+    .curso-actual-info {
+        padding: 1.5rem;
+    }
+
+    .curso-actual-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .curso-actual-info p {
+        font-size: 1.2rem;
+    }
+
+    .volver-al-dashboard {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .lecciones-arbol {
+        justify-content: flex-start;
+        gap: 2.5rem 3%;
+    }
+
+    .leccion-nodo {
+        flex: 0 0 48.5%;
+        width: 48.5%;
+        max-width: 48.5%;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) { /*Query mobile*/
+    .mapa-curso {
+        padding: 1.5rem 0;
+        gap: 2.5rem;
+    }
+
+    .curso-actual h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .curso-actual-info {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .curso-actual-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .curso-actual-info p {
+        font-size: 1.1rem;
+    }
+
+    .volver-al-dashboard {
+        width: 90%;
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 1rem 0;
+    }
+
+    .lecciones-arbol {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .leccion-nodo {
+        flex: 1 0 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 2rem;
+    }
+
+    .leccion-nodo h5 {
+        font-size: 1.8rem;
+    }
+
+    .leccion-nodo .boton-tarjeta {
+        width: 90%;
+        padding: 1rem;
+    }
 }

@@ -60,8 +60,8 @@ main {
     align-items: center;
     justify-content: flex-start;
     gap: 1.5rem;
-    flex: 1 0 30%; /* Manejo flex grow flex shrink y flex basis en una linea */
-    max-width: 32%; /* Esto se lo puse porque si no con el f-grow 1 ocuparia el 100% a lo ancho, asi limito el crecimiento */
+    flex: 1 0 31%; 
+    max-width: 32%; 
     background-color: white;
     border: 0.2rem solid #e5e5e5; 
     border-radius: 2.5rem;
@@ -104,7 +104,6 @@ main {
 .barra-progreso {
     display: flex;
     align-items: center;
-    margin: 1rem 0;
     width: 60%;
     height: 1.2rem;
     margin: 0;
@@ -133,12 +132,14 @@ main {
     font-size: 1.5rem;
     text-decoration: none;
     background-color: rgb(0, 136, 255);
-    padding: 0.8rem;
+    padding: 0.8rem 2rem;
     border-radius: 1.5rem;
     color: white;   
     font-weight: bold;
     border: 0.2rem solid rgb(0, 85, 160);
     box-shadow: 0 0.6rem 0 rgb(0, 85, 160); 
+    width: 80%;
+    text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
@@ -151,4 +152,71 @@ main {
 
 .boton-tarjeta:active {
     transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+@media (min-width: 481px) and (max-width: 1024px) { /*Qiery tablet-note */
+    .panel-estadisticas {
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 2rem;
+        justify-content: space-around;
+    }
+
+    .stat-item {
+        flex: 0 0 40%; 
+        justify-content: center;
+    }
+
+    .cursos {
+        justify-content: flex-start;
+        gap: 2.5rem 3%;
+    }
+
+    .curso-idioma {
+        flex: 0 0 48.5%;
+        width: 48.5%;
+        max-width: 48.5%; 
+    }
+}
+
+@media (max-width: 480px) { /* Query mobile */
+    .panel-estadisticas {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    .stat-item {
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 1rem;
+    }
+
+    .cursos {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .curso-idioma {
+        flex: 1 0 100%;
+        width: 100%;
+        max-width: 100%; 
+        padding: 2rem;
+    }
+
+    .titulo-del-curso {
+        font-size: 1.8rem;
+    }
+
+    .img-tarjetas {
+        width: 55%;
+    }
+
+    .boton-tarjeta {
+        width: 90%;
+        padding: 1rem;
+    }
 }

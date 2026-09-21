@@ -438,3 +438,93 @@
     background-color: rgb(0, 136, 255);
     border-radius: 1rem;
 }
+
+@media (min-width: 481px) and (max-width: 1024px) { /*tablet query*/
+    .ejercicio-area-principal {
+        padding: 2.5rem;
+    }
+
+    .ejercicio-comprobacion-exito,
+    .ejercicio-comprobacion-error {
+        padding: 2rem 3rem;
+    }
+}
+
+@media (max-width: 480px) { /*query mobile*/
+    .leccion-actual {
+        padding: 1rem 0;
+        gap: 2rem;
+    }
+
+    .ejercicio-barra-superior {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .btn-salir-ejercicio {
+        font-size: 1.3rem;
+    }
+
+    .porcentaje-leccion,
+    .vidas-contador {
+        font-size: 1.1rem;
+    }
+
+    .ejercicio-area-principal {
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .ejercicio-area-principal h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .frase-a-traducir {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .zona-respuesta,
+    .banco-palabras {
+        gap: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .palabra-respuesta,
+    .palabra-respuesta-usada {
+        font-size: 1.3rem;
+        padding: 0.6rem 1.1rem;
+    }
+
+    .btn-comprobar-falso {
+        width: 90%;
+        padding: 1rem 0;
+        font-size: 1.4rem;
+    }
+
+    .ejercicio-comprobacion-exito,
+    .ejercicio-comprobacion-error {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+        bottom: -35rem; 
+    }
+
+    .resultado-titulo {
+        font-size: 1.6rem;
+    }
+
+    .resultado-subtitulo {
+        font-size: 1.2rem;
+    }
+
+    .btn-continuar-leccion,
+    .btn-reintentar-leccion {
+        width: 90%;
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 1.4rem;
+    }
+}

@@ -70,11 +70,12 @@
     align-items: center;
     justify-content: flex-start;
     gap: 1.2rem;
-    flex: 0 0 31.5%;
+    flex: 0 0 31%;
+    max-width: 32%;
     background-color: white;
     border: 0.2rem solid #e5e5e5;
     border-radius: 2.5rem;
-    padding: 2.5rem;
+    padding: 2.5rem 1.5rem;
     box-shadow: 0 0.6rem 0 #e5e5e5;
     text-align: center;
     position: relative;
@@ -154,3 +155,94 @@
 .producto-tarjeta-recarga .btn-comprar-precio:hover {
     box-shadow: 0 0.8rem 0 #b36900;
 }
+
+@media (max-width: 480px) {    /* Query para celulares */
+    .bloque-de-tienda-general {
+        padding: 1.5rem 0;
+        gap: 2.5rem; 
+    }
+
+    .panel-saldo-tienda {
+        justify-content: center;
+        padding: 1.2rem;
+    }
+
+    .tienda-categoria-bloque h2 {
+        font-size: 1.6rem; 
+        text-align: center; 
+    }
+
+    .seccion-productos {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem; 
+    }
+
+    .producto-tarjeta,
+    .producto-tarjeta-recarga {
+        flex: 1 0 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 2rem 1.5rem; 
+        gap: 1rem;
+    }
+
+    .producto-icono {
+        font-size: 3rem; 
+    }
+
+    .producto-tarjeta h3,
+    .producto-tarjeta-recarga h3 {
+        font-size: 1.6rem;
+    }
+
+    .producto-descripcion {
+        font-size: 1.1rem;
+    }
+
+    .btn-comprar-precio {
+        width: 90%;
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 1024px) { /*Query para tablet*/
+    .bloque-de-tienda-general {
+        padding: 2rem 0;
+        gap: 3rem;
+    }
+
+    .tienda-categoria-bloque h2 {
+        font-size: 1.8rem;
+    }
+
+    .seccion-productos {
+        justify-content: flex-start;
+        gap: 2.5rem 3%; 
+    }
+
+    .producto-tarjeta,
+    .producto-tarjeta-recarga {
+        flex: 0 0 48.5%;
+        width: 48.5%;
+        max-width: 48.5%;
+        padding: 2.5rem 2rem;
+    }
+
+    .producto-icono {
+        font-size: 3.2rem;
+    }
+
+    .producto-tarjeta h3,
+    .producto-tarjeta-recarga h3 {
+        font-size: 1.7rem;
+    }
+
+    .btn-comprar-precio {
+        width: 85%;
+        padding: 0.9rem 1.5rem;
+    }
+}
+

@@ -34,7 +34,7 @@ main {
 }
 
 .avatar {
-    position: relative; 
+    position: relative;
     width: 14rem;
     height: 14rem;
     margin-bottom: 2rem;
@@ -44,7 +44,7 @@ main {
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: 50%; 
+    border-radius: 50%;
     object-fit: cover;
     border: 0.2rem solid #e5e5e5;
 }
@@ -134,8 +134,8 @@ main {
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
-    margin-top: 3rem; 
-    border-top: 0.15rem solid #e5e5e5; 
+    margin-top: 3rem;
+    border-top: 0.15rem solid #e5e5e5;
     padding-top: 2rem;
 }
 
@@ -157,7 +157,7 @@ main {
 .estadistica-historica-valor {
     font-size: 1.8rem;
     font-weight: bold;
-    color: rgb(0, 136, 255); 
+    color: rgb(0, 136, 255);
 }
 
 .estadistica-historica-nombre {
@@ -196,7 +196,7 @@ legend {
     color: #3c3c3c;
 }
 
-.datos input, 
+.datos input,
 .datos select {
     width: 100%;
     padding: 1rem;
@@ -210,7 +210,7 @@ legend {
     transition: border-color 0.2s ease;
 }
 
-.datos input:focus, 
+.datos input:focus,
 .datos select:focus {
     border-color: rgb(0, 136, 255);
 }
@@ -227,7 +227,8 @@ legend {
    unicamente cuando toco para escribir en algun campo del field contraseña */
 
 .seccion-password:has(#pass-nueva:not(:placeholder-shown)) .datos input {
-    border-color: #ff4b4b; /* Borde rojo para simular que es obligatorio */
+    border-color: #ff4b4b;
+    /* Borde rojo para simular que es obligatorio */
     background-color: #fff8f8;
 }
 
@@ -243,12 +244,12 @@ legend {
     margin-top: 1rem;
 }
 
-.btn-guardar, 
+.btn-guardar,
 .btn-cerrar-sesion {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
-    padding: 0.8rem 2rem; 
+    padding: 0.8rem 2rem;
     border-radius: 1.5rem;
     text-transform: uppercase;
     cursor: pointer;
@@ -282,8 +283,122 @@ legend {
     border-color: #c72c2c;
 }
 
-.btn-guardar:active, 
+.btn-guardar:active,
 .btn-cerrar-sesion:active {
     transform: translateY(0.4rem);
     box-shadow: 0 0 0 transparent;
+}
+
+@media (min-width: 481px) and (max-width: 1024px) { /*Query notebook-tablet*/
+    main {
+        flex-direction: column; 
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .perfil-usuario {
+        flex: 0 0 100%;
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .resumen-insignias {
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .insignia-item {
+        flex: 0 0 48%; 
+    }
+
+    .estadisticas-historicas {
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .estadistica-historica-bloque {
+        flex: 0 0 48%;
+        border-bottom: 0.15rem solid #e5e5e5;
+    }
+
+    .perfil-formulario {
+        width: 100%;
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 480px) { /*Query mobile*/
+    main {
+        flex-direction: column; 
+        padding: 1.5rem 0;
+        gap: 2.5rem;
+    }
+
+    .perfil-usuario,
+    .perfil-formulario {
+        flex: 1 0 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 2.5rem 1.5rem; 
+    }
+
+    .avatar {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .perfil-usuario h2 {
+        font-size: 1.8rem;
+    }
+
+    .fecha-ingreso {
+        margin-bottom: 2rem;
+    }
+
+    .resumen-insignias,
+    .estadisticas-historicas {
+        gap: 1rem;
+    }
+
+    .insignia-item,
+    .estadistica-historica-bloque {
+        padding: 0.8rem 1.2rem;
+    }
+
+    .insignia-numero,
+    .estadistica-historica-valor {
+        font-size: 1.4rem;
+    }
+
+    fieldset {
+        padding: 1.5rem 1rem;
+        gap: 1.2rem;
+    }
+
+    .datos input, 
+    .datos select {
+        padding: 0.8rem;
+        font-size: 1.3rem;
+    }
+
+    .perfil-botones-acciones {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .btn-guardar, 
+    .btn-cerrar-sesion {
+        width: 100%; 
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 1.4rem;
+    }
 }
