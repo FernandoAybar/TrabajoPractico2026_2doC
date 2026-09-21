@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Babylon - ¡Aprende idiomas!</title>
     <link rel="stylesheet" href="../estilos CSS/styles-header-body-footer.css">
-    <link rel="stylesheet" href="../estilos CSS/styles-dashboard.css">
+    <link rel="stylesheet" href="../estilos CSS/styles-mapa-curso.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap"
@@ -14,7 +14,9 @@
 </head>
 
 <body>
+
     <header>
+
         <nav>
             <section class="logo">
                 <img class="logo-torre" src="../imagenes/babylon_torre_recortada.png" alt="Babylon logo"> <img
@@ -28,74 +30,53 @@
                 <a class="etiqueta-del-nav" href="../index.html">Cerrar sesión</a>
             </section>
         </nav>
+
     </header>
 
-    <main>
+    <main class="mapa-curso">
 
-        <section class="panel-estadisticas">
+        <section class="curso-actual">
 
-            <article class="stat-item racha">
-                <span class="stat-icono">🔥</span>
-                <div class="stat-info">
-                    <h4>7 Días</h4>
-                    <p>Racha de estudio</p>
-                </div>
+            <h2>De Español a Inglés 🇪🇸🇬🇧 </h2>
+            <article class="curso-actual-info">
+                <h3>Unidad 1: Introducción y Saludos</h3>
+                <p>Aprende las frases más comunes y saludos cotidianos</p>
             </article>
-
-            <article class="stat-item xp">
-                <span class="stat-icono">⚡</span>
-                <div class="stat-info">
-                    <h4>1,250 XP</h4>
-                    <p>Experiencia Total</p>
-                </div>
-            </article>
-
-            <article class="stat-item liga">
-                <span class="stat-icono">🏆</span>
-                <div class="stat-info">
-                    <h4>Liga Oro</h4>
-                    <p>Posición actual</p>
-                </div>
-            </article>
-
         </section>
 
-        <section class="cursos">
+        <section class="lecciones-arbol">
 
-            <article class="curso-idioma">
-                <h3 class="titulo-del-curso">De Español a Inglés</h3>
-                <img class="img-tarjetas" src="../imagenes/español-a-ingles.png" alt="Español a inglés">
-                <h3 class="texto-tarjeta">Progreso:</h3>
+            <article class="leccion-nodo completada">
+                <p class="estado-completado-icono">🟢</p>
+                <h4>Lección 1</h4>
+                <h5>Frases Básicas</h5>
+                <p class="estado-texto">Estado: Completado</p>
                 <div class="barra-progreso">
-                    <div class="relleno-barra-ingles">
-                    </div>
+                    <div class="relleno-barra-ingles-completado"></div>
                 </div>
-                <h3 class="texto-tarjeta">Nivel: Intermedio (B1)</h3>
-                <a class="boton-tarjeta" href="./curso-ingles.html">Continuar</a>
+                <a href="" class="boton-tarjeta">Repasar</a>
             </article>
 
-            <article class="curso-idioma">
-                <h3 class="titulo-del-curso">De Español a Alemán</h3>
-                <img class="img-tarjetas" src="../imagenes/español-a-aleman.png" alt="Español a alemán">
-                <h3 class="texto-tarjeta">Progreso:</h3>
+            <article class="leccion-nodo en-curso">
+                <p class="estado-en-curso-icono">🟡</p>
+                <h4>Lección 2</h4>
+                <h5>Presentaciones</h5>
+                <p class="estado-texto">Estado: En Curso</p>
                 <div class="barra-progreso">
-                    <div class="relleno-barra-aleman">
-                    </div>
+                    <div class="relleno-barra-ingles-en-curso"></div>
                 </div>
-                <h3 class="texto-tarjeta">Nivel: Principiante (A1)</h3>
-                <a class="boton-tarjeta" href="./curso-aleman.html">Continuar</a>
+                <a href="" class="boton-tarjeta">Continuar</a>
             </article>
 
-            <article class="curso-idioma">
-                <h3 class="titulo-del-curso">De Español a Chino</h3>
-                <img class="img-tarjetas" src="../imagenes/español-a-chino.png" alt="Español a chino">
-                <h3 class="texto-tarjeta">Progreso:</h3>
+            <article class="leccion-nodo bloqueada">
+                <p class="estado-bloqueado-icono">🔒</p>
+                <h4>Lección 3</h4>
+                <h5>Vocabulario de Familia</h5>
+                <p class="estado-texto">Estado: Bloqueado</p>
                 <div class="barra-progreso">
-                    <div class="relleno-barra-chino">
-                    </div>
+                    <div class="relleno-barra-ingles-sin-iniciar"></div>
                 </div>
-                <h3 class="texto-tarjeta">Nivel: Inicial (HSK1)</h3>
-                <a class="boton-tarjeta" href="./curso-chino.html">Empezar</a>
+                <a href="" class="boton-tarjeta">Bloqueado</a>
             </article>
 
         </section>

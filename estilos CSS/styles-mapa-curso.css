@@ -1,0 +1,213 @@
+.mapa-curso {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    padding: 3rem 0;
+    font-family: 'Hind Vadodara', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.curso-actual {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+}
+
+.curso-actual h2 {
+    font-size: 2.4rem;
+    color: #3c3c3c;
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+    padding-top: 0rem;
+    margin: 0;
+}
+
+.curso-actual-info {
+    width: 100%;
+    background-color: #f1f8ff; 
+    border: 0.2rem solid rgb(0, 136, 255);
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 0 rgb(0, 136, 255);
+    margin-bottom: 1.5rem; 
+}
+
+.curso-actual-info h3 {
+    font-size: 1.8rem;
+    color: #3c3c3c;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.curso-actual-info p {
+    font-size: 1.3rem;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.lecciones-arbol {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.leccion-nodo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    flex: 0 0 31.5%; 
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 0.6rem 0 #e5e5e5;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.leccion-nodo:not(.bloqueada):hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1rem 0 #d8d8d8;
+    border-color: #cdcdcd;
+}
+
+.estado-completado-icono,
+.estado-en-curso-icono,
+.estado-bloqueado-icono {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.leccion-nodo h4 {
+    font-size: 1.6rem;
+    color: #afafaf;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.leccion-nodo h5 {
+    font-size: 2rem;
+    color: #3c3c3c;
+    font-weight: 700;
+    text-align: center;
+}
+
+.estado-texto {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #7a7a7a;
+}
+
+.barra-progreso {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 1.2rem;
+    background-color: #cdcdcd;
+    border: solid 0.08rem #7c7c7c;
+    border-radius: 1rem;
+}
+
+.relleno-barra-ingles-completado,
+.relleno-barra-ingles-en-curso,
+.relleno-barra-ingles-sin-iniciar {
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.relleno-barra-ingles-completado {
+    width: 100%;
+    background-color: #77e10d; 
+}
+
+.relleno-barra-ingles-en-curso {
+    width: 40%;
+    background-color: #ff9600; 
+}
+
+.relleno-barra-ingles-sin-iniciar {
+    width: 0%;
+}
+
+.leccion-nodo .boton-tarjeta {
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: rgb(0, 136, 255);
+    padding: 0.8rem 2rem;
+    border-radius: 1.5rem;
+    color: white;
+    font-weight: bold;
+    border: 0.2rem solid rgb(0, 85, 160);
+    box-shadow: 0 0.6rem 0 rgb(0, 85, 160);
+    text-transform: uppercase;
+    margin-top: auto; 
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    width: 80%;
+    text-align: center;
+}
+
+.leccion-nodo .boton-tarjeta:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1rem 0 rgb(0, 66, 124);
+}
+
+.leccion-nodo .boton-tarjeta:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+.leccion-nodo.bloqueada {
+    opacity: 0.6; 
+}
+
+.leccion-nodo.bloqueada .boton-tarjeta {
+    background-color: #afafaf;
+    border-color: #7a7a7a;
+    box-shadow: 0 0.6rem 0 #7a7a7a;
+    pointer-events: none; 
+    cursor: not-allowed; 
+}
+
+.relleno-barra-aleman-completado,
+.relleno-barra-aleman-en-curso,
+.relleno-barra-aleman-sin-iniciar {
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.relleno-barra-aleman-completado {
+    width: 100%;
+    background-color: #77e10d; 
+}
+
+.relleno-barra-aleman-en-curso {
+    width: 30%; 
+    background-color: #ff9600; 
+}
+
+.relleno-barra-aleman-sin-iniciar {
+    width: 0%;
+}
+
+.relleno-barra-chino-en-curso,
+.relleno-barra-chino-sin-iniciar {
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.relleno-barra-chino-en-curso {
+    width: 0%; 
+    background-color: #ff9600; 
+}
+
+.relleno-barra-chino-sin-iniciar {
+    width: 0%;
+}
