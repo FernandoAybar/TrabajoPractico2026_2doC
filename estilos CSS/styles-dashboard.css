@@ -2,20 +2,12 @@ main {
     width: 100%;
     padding: 2rem 0;
     font-family: 'Hind Vadodara', sans-serif;
-}
-
-.cursos {
-    display: flex;
-    justify-content: left;
-    gap: 2.5rem;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
+    margin-bottom: 2rem;
 }
 
 .panel-estadisticas {
     display: flex;
-    justify-content: space-around; /* Distribuye las 3 estadísticas equitativamente */
+    justify-content: space-around; 
     align-items: center;
     width: 100%;
     background-color: white;
@@ -52,13 +44,24 @@ main {
     margin: 0;
 }
 
+.cursos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
 .curso-idioma {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: 1.5rem;
-    flex: 0 0 30%;
+    flex: 1 0 30%; /* Manejo flex grow flex shrink y flex basis en una linea */
+    max-width: 32%; /* Esto se lo puse porque si no con el f-grow 1 ocuparia el 100% a lo ancho, asi limito el crecimiento */
     background-color: white;
     border: 0.2rem solid #e5e5e5; 
     border-radius: 2.5rem;
@@ -106,7 +109,7 @@ main {
     height: 1.2rem;
     margin: 0;
     background-color: #cdcdcd;
-    border: solid 0.08rem black;
+    border: solid 0.02rem #7c7c7c;
     border-radius: 1rem;
 }
 
@@ -144,4 +147,8 @@ main {
     box-shadow: 0 1rem 0 rgb(0, 66, 124);
     border-color: rgb(0, 85, 160);
     cursor: pointer;
+}
+
+.boton-tarjeta:active {
+    transform: translateY(0.4rem);
 }

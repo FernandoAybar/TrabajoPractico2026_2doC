@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babylon - Mi perfil</title>
+    <link rel="stylesheet" href="../estilos CSS/styles-header-body-footer.css">
+    <link rel="stylesheet" href="../estilos CSS/styles-mi-perfil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <section class="logo">
+                <img class="logo-torre" src="../imagenes/babylon_torre_recortada.png" alt="Babylon logo"> <img
+                    class="logo-texto" src="../imagenes/babylon_text_recortado.png" alt="Texto Babylon">
+            </section>
+
+            <section class="links-de-nav">
+                <a class="etiqueta-del-nav" href="./dashboard.html">Cursos</a>
+                <a class="etiqueta-del-nav" href="./ranking.html">Ranking</a>
+                <a class="etiqueta-del-nav" href="./tienda.html">Tienda</a>
+                <a class="etiqueta-del-nav" href="./mi-perfil.html">Mi Perfil</a>
+                <a class="etiqueta-del-nav" href="../index.html">Cerrar sesión</a>
+            </section>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="perfil-usuario">
+
+            <section class="avatar">
+                <img class="avatar-imagen" src="../imagenes/avatar-generico.png" alt="Foto de perfil de Juan Pérez">
+                <button type="button" class="btn-editar-avatar" aria-label="Cambiar avatar">✏️</button>
+                <!--El aria label es como un alt para no videntes-->
+            </section>
+
+            <h2>Juan Pérez</h2>
+            <p class="username">@juanperez_web</p>
+            <p class="fecha-ingreso">Miembro desde Marzo 2025</p>
+
+            <section class="resumen-insignias">
+
+                <article class="insignia-item">
+                    <p class="insignia-numero">🔥 7</p>
+                    <p class="insignia-texto">Racha</p>
+                </article>
+
+                <article class="insignia-item">
+                    <p class="insignia-numero">⚡ 1.2k</p>
+                    <p class="insignia-texto">Total XP</p>
+                </article>
+
+                <article class="insignia-item">
+                    <p class="insignia-numero">🏆 Oro</p>
+                    <p class="insignia-texto">Liga</p>
+                </article>
+
+            </section>
+
+            <section class="estadisticas-historicas">
+                <h3>Estadísticas Históricas</h3>
+
+                <article class="estadistica-historica-bloque">
+                    <p class="estadistica-historica-valor">120</p>
+                    <p class="estadistica-historica-nombre">Minutos de estudio</p>
+                </article>
+
+                <article class="estadistica-historica-bloque">
+                    <p class="estadistica-historica-valor">34</p>
+                    <p class="estadistica-historica-nombre">Lecciones completadas</p>
+                </article>
+
+                <article class="estadistica-historica-bloque">
+                    <p class="estadistica-historica-valor">450</p>
+                    <p class="estadistica-historica-nombre">Palabras aprendidas</p>
+                </article>
+            </section>
+
+        </section>
+
+        </section>
+
+        <form class="perfil-formulario" action="#" method="POST">
+
+            <fieldset class="seccion-datos-cuenta"> <!--El fieldset lo use porque agrupa todo en bloque-->
+
+                <legend>Datos de la Cuenta</legend>
+
+                <section class="datos">
+                    <label for="username-input">Nombre de usuario:</label>
+                    <input type="text" id="username-input" name="username" value="juanperez_web" required>
+                </section>
+
+                <section class="datos">
+                    <label for="email">Email registrado:</label>
+                    <input type="email" id="email" name="email" value="juan.perez@alumnos.unlam.edu.ar" disabled>
+                </section>
+
+            </fieldset>
+
+            <fieldset class="seccion-password">
+
+                <legend>Cambiar Contraseña</legend>
+
+                <section class="datos">
+                    <label for="pass-actual">Contraseña actual:</label>
+                    <input type="password" id="pass-actual" name="pass_actual" placeholder="••••••••">
+                </section>
+
+                <section class="datos">
+                    <label for="pass-nueva">Nueva contraseña:</label>
+                    <input type="password" id="pass-nueva" name="pass_nueva" placeholder="Mínimo 8 caracteres">
+                </section>
+
+                <section class="datos">
+                    <label for="pass-confirmar">Confirmar nueva contraseña:</label>
+                    <input type="password" id="pass-confirmar" name="pass_confirmar" placeholder="Repite tu contraseña">
+                </section>
+            </fieldset>
+
+            <section class="datos">
+
+                <label for="idioma-interfaz">Idioma principal de interfaz:</label>
+                <select id="idioma-interfaz" name="idioma">
+                    <option value="es" selected>Español</option>
+                    <option value="en">Inglés (English)</option>
+                    <option value="pt">Portugués (Português)</option>
+                    <option value="de">Alemán (Deutsch)</option>
+                    <option value="中文">Chino (Zhōngwén)</option>
+                </select>
+
+            </section>
+
+            <section class="perfil-botones-acciones">
+
+                <button type="submit" class="btn-guardar">Guardar Cambios</button>
+                <a href="../index.html" class="btn-cerrar-sesion">Cerrar Sesión</a>
+
+            </section>
+
+        </form>
+
+    </main>
+
+    <footer class="footer-sitio">
+
+        <section class="footer-marca">
+            <div class="footer-logo">
+                <img class="logo-torre-footer" src="../imagenes/babylon_torre_recortada.png" alt="Babylon">
+                <img class="logo-texto-footer" src="../imagenes/babylon_text_recortado.png" alt="Texto Babylon">
+            </div>
+            <p class="copyright">&copy; 2026 Babylon. Todos los derechos reservados.</p>
+        </section>
+
+        <section class="footer-redes">
+            <a class="etiqueta-red" href="">
+                <img class="img-red-social" src="../imagenes/instagram-icono.png" alt="Instagram">
+                Instagram
+            </a>
+            <a class="etiqueta-red" href="">
+                <img class="img-red-social" src="../imagenes/tiktok-icono.png" alt="TikTok">
+                TikTok
+            </a>
+            <a class="etiqueta-red" href="">
+                <img class="img-red-social" src="../imagenes/youtube-icono.png" alt="YouTube">
+                YouTube
+            </a>
+
+        </section>
+
+    </footer>
+
+</body>
+
+</html>

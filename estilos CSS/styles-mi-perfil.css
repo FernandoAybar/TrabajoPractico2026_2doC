@@ -1,0 +1,289 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    font-family: 'Hind Vadodara', sans-serif;
+    gap: 4rem;
+}
+
+.perfil-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 0 0 32%;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 2.5rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 0.6rem 0 #e5e5e5;
+}
+
+.perfil-formulario {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 2.5rem;
+    padding: 3rem;
+    box-shadow: 0 0.6rem 0 #e5e5e5;
+    gap: 2.5rem;
+}
+
+.avatar {
+    position: relative; 
+    width: 14rem;
+    height: 14rem;
+    margin-bottom: 2rem;
+}
+
+.avatar-imagen {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 0.2rem solid #e5e5e5;
+}
+
+.btn-editar-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.4rem;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 50%;
+    box-shadow: 0 0.3rem 0 #e5e5e5;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease;
+}
+
+.btn-editar-avatar:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.4rem 0 #d8d8d8;
+}
+
+.btn-editar-avatar:active {
+    transform: translateY(0.3rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+.perfil-usuario h2 {
+    font-size: 2.2rem;
+    color: #3c3c3c;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.username {
+    font-size: 1.4rem;
+    color: #afafaf;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.fecha-ingreso {
+    font-size: 1.2rem;
+    color: #afafaf;
+    margin-bottom: 3rem;
+}
+
+.resumen-insignias {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.insignia-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #f8f9fa;
+    border: 0.15rem solid #e5e5e5;
+    border-radius: 1.5rem;
+}
+
+.insignia-numero {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #3c3c3c;
+}
+
+.insignia-texto {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #afafaf;
+    text-transform: uppercase;
+}
+
+.estadisticas-historicas {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 3rem; 
+    border-top: 0.15rem solid #e5e5e5; 
+    padding-top: 2rem;
+}
+
+.estadisticas-historicas h3 {
+    font-size: 1.5rem;
+    color: #3c3c3c;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.estadistica-historica-bloque {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.estadistica-historica-valor {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(0, 136, 255); 
+}
+
+.estadistica-historica-nombre {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #7a7a7a;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+legend {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #afafaf;
+    padding: 0 1rem;
+    text-transform: uppercase;
+}
+
+.datos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.datos label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #3c3c3c;
+}
+
+.datos input, 
+.datos select {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-family: 'Hind Vadodara', sans-serif;
+    color: #3c3c3c;
+    background-color: #f8f9fa;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 1.2rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.datos input:focus, 
+.datos select:focus {
+    border-color: rgb(0, 136, 255);
+}
+
+.datos input:disabled {
+    background-color: #e5e5e5;
+    color: #7a7a7a;
+    cursor: not-allowed;
+}
+
+/* Hice esto porque si ponia required a los botones de contraseña
+   me veia obligado a cambiar la contraseña cuando solo queria cambiar
+   el usuario o el email, entonces así simulo que son campos obligatorios
+   unicamente cuando toco para escribir en algun campo del field contraseña */
+
+.seccion-password:has(#pass-nueva:not(:placeholder-shown)) .datos input {
+    border-color: #ff4b4b; /* Borde rojo para simular que es obligatorio */
+    background-color: #fff8f8;
+}
+
+.seccion-password:has(#pass-nueva:not(:placeholder-shown)) .datos input:focus {
+    border-color: rgb(0, 136, 255);
+    background-color: #f8f9fa;
+}
+
+.perfil-botones-acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.btn-guardar, 
+.btn-cerrar-sesion {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.8rem 2rem; 
+    border-radius: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-guardar {
+    background-color: rgb(0, 136, 255);
+    color: white;
+    border: none;
+    box-shadow: 0 0.4rem 0 rgb(0, 85, 160);
+    cursor: pointer;
+}
+
+.btn-cerrar-sesion {
+    background-color: #ff4b4b;
+    color: white;
+    box-shadow: 0 0.4rem 0 #c72c2c;
+    cursor: pointer;
+}
+
+.btn-guardar:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1rem 0 rgb(0, 66, 124);
+    border-color: rgb(0, 85, 160);
+}
+
+.btn-cerrar-sesion:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1rem 0 #9e1b1b;
+    border-color: #c72c2c;
+}
+
+.btn-guardar:active, 
+.btn-cerrar-sesion:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
