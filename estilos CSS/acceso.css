@@ -17,18 +17,131 @@ main .blur{
 
 
 .Nombre_titulo{
+    font-size: 0.8rem;
     position: absolute;
-    top:2px;
-    left: 35px;
+    top:80px;
+    left: 5px;
     text-align: center;
     color: rgb(0, 0, 0);
-    font-size: 7rem;
-    
 
-
+    animation: typing 5s forwards; /* prepara la animacion del @keyframes que esta debajo */
+    white-space: nowrap; /* permite que no tenga salto de linea integra todo en una linea*/
 
 }
 
+@keyframes typing {
+    from {
+        width:0;
+    }
+
+    to {
+        width: 94%;
+    }
+}
+
+
+
 main .grid_login{
     position: absolute;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1.5rem;
+    
+}
+
+.grid_login .Inicio_titulo{
+    grid-column: 1/-1;
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+
+.L_usuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #00000050;
+    width: 100%;
+    height: 30rem;
+    border-radius: 5%;
+}
+
+.email_usuario, .contraseña_usuario{
+    display: flex;
+   
+
+    
+}
+
+
+
+.icono_l{
+    background-color: black;
+    border-radius: 150px 0 0 150px;
+    width: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+form i{
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+    
+}
+form input{
+    border: 0.1rem solid black;
+    padding-left: 1rem;
+    border-radius: 0 150px 150px 0;
+}
+
+
+
+.Imagen_Idioma , .Imagen_Idioma img{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width:1024px){
+
+.Nombre_titulo{
+    font-size: 7rem;
+    top:2px;
+    left: 35px;
+}
+
+
+main .grid_login{
+
+
+    /*faltante por vista ampliada 
+    
+    */
+ grid-template-columns: repeat(2,1fr);
+ grid-template-rows: 1fr;
+ grid-row-gap: 2rem;
+
+}
+
+
+
 }

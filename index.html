@@ -1,29 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./estilos CSS/body.css">
     <link rel="stylesheet" href="./estilos CSS/acceso.css">
     <title>Babylon - Log-in</title>
 </head>
+
 <body>
     <main>
         <img src="./imagenes/FondoIdioma.jpeg" alt="fondo de pantalla" class="blur">
         <h1 class="Nombre_titulo"> N o m b r e P a g i n a</h1>
 
         <section class="container grid_login">
-                <h2 class="Inicio_titulo"> Inicio de sesi&oacute;n </h2>
+            <h2 class="Inicio_titulo"> Inicio de sesi&oacute;n </h2>
 
-             <section class="L_usuario">
+            <section class="L_usuario">
+                <form action="#" method="get" id="formulario_acceso">
 
-             </section>  
+                    <img src="./imagenes/Individual.gif" alt="Logo" class="Logo_principal">
 
-             <section class="Imagen_Idioma">
+                    <div class="email_usuario">
+                        <div class="icono_l">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="dato_l">
+                            <label for="email"></label>
+                            <input type="email" id="email" name="email" placeholder="Nombre de usuario">
+                        </div>
 
-             </section>
+                    </div>
+                    <div class="contraseña_usuario">
+                        <div class="icono_l">
+                            <i class="fa-solid fa-unlock"></i>
+                        </div>
+                        <div class="dato_l">
+                            <label for="pass"></label>
+                            <input type="password" name="pass" id="pass" placeholder="Contraseña">
+                        </div>
+                    </div>
+                    <button  class="ingresar" type="submit"> Ingresar</button>
+                    <div class="crear_cuenta_button">
+                        <a href="#"> Crear Cuenta</a>
+                    </div>
+
+                </form>
+            </section>
+
+            <section class="Imagen_Idioma">
+                <img src="./imagenes/saludos.jpeg" alt="Imagen de saludos" width="350" height="480">
+            </section>
 
         </section>
     </main>
 </body>
+
 </html>
