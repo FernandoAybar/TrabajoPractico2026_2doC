@@ -1,0 +1,156 @@
+.bloque-de-tienda-general {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 3rem 0;
+    font-family: 'Hind Vadodara', sans-serif;
+    gap: 4rem;
+    margin-bottom: 2rem;
+}
+
+.panel-saldo-tienda {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 2rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0.5rem 0 #e5e5e5;
+}
+
+.saldo-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.saldo-icono {
+    font-size: 2.5rem;
+}
+
+.saldo-info h4 {
+    font-size: 1.6rem;
+    color: #3c3c3c;
+    font-weight: 700;
+}
+
+.saldo-info p {
+    font-size: 1.1rem;
+    color: #afafaf;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.tienda-categoria-bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    width: 100%;
+}
+
+.tienda-categoria-bloque h2 {
+    font-size: 2rem;
+    color: #3c3c3c;
+    font-weight: 700;
+}
+
+.seccion-productos {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.producto-tarjeta,
+.producto-tarjeta-recarga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.2rem;
+    flex: 0 0 31.5%;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 0.6rem 0 #e5e5e5;
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.producto-tarjeta:hover,
+.producto-tarjeta-recarga:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1rem 0 #d8d8d8;
+    border-color: #cdcdcd;
+}
+
+.producto-icono {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.producto-tarjeta h3,
+.producto-tarjeta-recarga h3 {
+    font-size: 1.8rem;
+    color: #3c3c3c;
+    font-weight: 700;
+}
+
+.producto-descripcion {
+    font-size: 1.2rem;
+    color: #7a7a7a;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.btn-comprar-precio {
+    font-size: 1.5rem;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(0, 136, 255);
+    padding: 0.8rem 2rem;
+    border-radius: 1.5rem;
+    border: 0.2rem solid rgb(0, 85, 160);
+    box-shadow: 0 0.5rem 0 rgb(0, 85, 160);
+    text-transform: uppercase;
+    width: 80%;
+    margin-top: auto;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-comprar-precio:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.8rem 0 rgb(0, 66, 124);
+}
+
+.btn-comprar-precio:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+.producto-tarjeta-recarga {
+    background-color: #fffdf0;
+    border-color: #ffda66;
+    box-shadow: 0 0.6rem 0 #ffda66;
+}
+
+.producto-tarjeta-recarga:hover {
+    border-color: #f0c243;
+    box-shadow: 0 1rem 0 #e0b230;
+}
+
+.producto-tarjeta-recarga .btn-comprar-precio {
+    background-color: #ff9600;
+    border-color: #d67e00;
+    box-shadow: 0 0.5rem 0 #d67e00;
+}
+
+.producto-tarjeta-recarga .btn-comprar-precio:hover {
+    box-shadow: 0 0.8rem 0 #b36900;
+}
