@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babylon - Ejercicio Práctico (Alemán Lección 1)</title>
+    <link rel="stylesheet" href="../estilos CSS/styles-header-body-footer.css">
+    <link rel="stylesheet" href="../estilos CSS/styles-lecciones.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <section class="logo">
+                <img class="logo-torre" src="../imagenes/babylon_torre_recortada.png" alt="Babylon logo">
+                <img class="logo-texto" src="../imagenes/babylon_text_recortado.png" alt="Texto Babylon">
+            </section>
+            <section class="links-de-nav">
+                <a class="etiqueta-del-nav" href="./dashboard.html">Cursos</a>
+                <a class="etiqueta-del-nav" href="./ranking.html">Ranking</a>
+                <a class="etiqueta-del-nav" href="./tienda.html">Tienda</a>
+                <a class="etiqueta-del-nav" href="./mi-perfil.html">Mi Perfil</a>
+                <a class="etiqueta-del-nav" href="../index.html">Cerrar sesión</a>
+            </section>
+        </nav>
+    </header>
+
+    <main class="leccion-actual">
+
+        <section class="ejercicio-barra-superior">
+            <a href="./curso-aleman.html" class="btn-salir-ejercicio" aria-label="Salir de la lección">❌</a>
+            <div class="barra-progreso-leccion">
+                <div class="relleno-progreso-leccion-1-aleman"></div>
+            </div>
+            <p class="porcentaje-leccion">100%</p>
+            <p class="vidas-contador">❤️❤️❤️ Vidas: 3</p>
+        </section>
+
+        <section class="ejercicio-area-principal">
+            <h2>Traduce la siguiente oración:</h2>
+            <p class="frase-a-traducir">
+                "Guten Tag, wie geht es dir?"
+            </p>
+            <button type="button" class="btn-escuchar-frase" aria-label="Escuchar pronunciación">🔊</button>
+
+            <section class="zona-respuesta">
+                <button type="button" class="palabra-respuesta">Hola</button>
+                <button type="button" class="palabra-respuesta">,</button>
+                <button type="button" class="palabra-respuesta">¿cómo</button>
+                <button type="button" class="palabra-respuesta">te</button>
+                <button type="button" class="palabra-respuesta">va?</button>
+            </section>
+
+            <h3>Banco de palabras disponibles:</h3>
+            <section class="banco-palabras">
+                <input type="checkbox" id="token-hola" class="check-palabra">
+                <label for="token-hola" class="palabra-respuesta-usada">Hola</label>
+
+                <input type="checkbox" id="token-dias" class="check-palabra">
+                <label for="token-dias" class="palabra-respuesta">días</label>
+
+                <input type="checkbox" id="token-va" class="check-palabra">
+                <label for="token-va" class="palabra-respuesta-usada">va?</label>
+
+                <input type="checkbox" id="token-gracias" class="check-palabra">
+                <label for="token-gracias" class="palabra-respuesta">Gracias</label>
+
+                <input type="checkbox" id="token-como" class="check-palabra">
+                <label for="token-como" class="palabra-respuesta-usada">¿cómo</label>
+
+                <input type="checkbox" id="token-buenos" class="check-palabra">
+                <label for="token-buenos" class="palabra-respuesta">Buenos</label>
+
+                <input type="checkbox" id="token-te" class="check-palabra">
+                <label for="token-te" class="palabra-respuesta-usada">te</label>
+
+                <input type="checkbox" id="token-coma" class="check-palabra">
+                <label for="token-coma" class="palabra-respuesta-usada">,</label>
+            </section>
+        </section>
+
+        <section class="comprobacion-exito">
+            <input type="checkbox" id="disparador-comprobacion" class="check-comprobar">
+            <label for="disparador-comprobacion" class="btn-comprobar-falso">Comprobar Respuesta</label>
+
+            <section class="ejercicio-comprobacion-exito">
+                <article class="mensaje-resultado">
+                    <p class="resultado-titulo">🎉 ¡Excelente! Respuesta correcta</p>
+                    <p class="resultado-subtitulo">Buen trabajo, dominas las frases básicas en alemán.</p>
+                </article>
+                <a href="./curso-aleman.html" class="btn-continuar-leccion">Continuar</a>
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="footer-sitio">
+        <section class="footer-marca">
+            <div class="footer-logo">
+                <img class="logo-torre-footer" src="../imagenes/babylon_torre_recortada.png" alt="Babylon">
+                <img class="logo-texto-footer" src="../imagenes/babylon_text_recortado.png" alt="Texto Babylon">
+            </div>
+            <p class="copyright">&copy; 2026 Babylon. Todos los derechos reservados.</p>
+        </section>
+
+        <section class="footer-redes">
+            <a class="etiqueta-red" href="">
+                <img class="img-red-social" src="../imagenes/instagram-icono.png" alt="Instagram">
+                Instagram
+            </a>
+            <a class="etiqueta-red" href="">
+                <img class="img-red-social" src="../imagenes/tiktok-icono.png" alt="TikTok">
+                TikTok
+            </a>
+            <a class="etiqueta-red" href="">
+                <img class="img-red-social" src="../imagenes/youtube-icono.png" alt="YouTube">
+                YouTube
+            </a>
+        </section>
+    </footer>
+
+</body>
+
+</html>

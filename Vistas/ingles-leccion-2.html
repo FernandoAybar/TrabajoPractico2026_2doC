@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babylon - Ejercicio Práctico (Inglés Lección 2)</title>
+    <link rel="stylesheet" href="../estilos CSS/styles-header-body-footer.css">
+    <link rel="stylesheet" href="../estilos CSS/styles-lecciones.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <section class="logo">
+                <img class="logo-torre" src="../imagenes/babylon_torre_recortada.png" alt="Babylon logo">
+                <img class="logo-texto" src="../imagenes/babylon_text_recortado.png" alt="Texto Babylon">
+            </section>
+            <section class="links-de-nav">
+                <a class="etiqueta-del-nav" href="./dashboard.html">Cursos</a>
+                <a class="etiqueta-del-nav" href="./ranking.html">Ranking</a>
+                <a class="etiqueta-del-nav" href="./tienda.html">Tienda</a>
+                <a class="etiqueta-del-nav" href="./mi-perfil.html">Mi Perfil</a>
+                <a class="etiqueta-del-nav" href="../index.html">Cerrar sesión</a>
+            </section>
+        </nav>
+    </header>
+
+    <main class="leccion-actual">
+
+        <section class="ejercicio-barra-superior">
+            <a href="./curso-ingles.html" class="btn-salir-ejercicio" aria-label="Salir de la lección">❌</a>
+            <div class="barra-progreso-leccion">
+                <div class="relleno-progreso-leccion-2-ingles"></div>
+            </div>
+            <p class="porcentaje-leccion">40%</p>
+            <p class="vidas-contador">💔❤️❤️ Vidas: 2</p>
+        </section>
+
+        <section class="ejercicio-area-principal">
+            <h2>Traduce la siguiente oración:</h2>
+            <p class="frase-a-traducir">
+                "Good bye, see you tomorrow"
+            </p>
+            <button type="button" class="btn-escuchar-frase" aria-label="Escuchar pronunciación">🔊</button>
+
+            <section class="zona-respuesta">
+            </section>
+
+            <h3>Banco de palabras disponibles:</h3>
+            <section class="banco-palabras">
+                <input type="checkbox" id="token-manana" class="check-palabra">
+                <label for="token-manana" class="palabra-respuesta">mañana</label>
+
+                <input type="checkbox" id="token-hola" class="check-palabra">
+                <label for="token-hola" class="palabra-respuesta">Hola</label>
+
+                <input type="checkbox" id="token-adios" class="check-palabra">
+                <label for="token-adios" class="palabra-respuesta">Adiós</label>
+
+                <input type="checkbox" id="token-gracias" class="check-palabra">
+                <label for="token-gracias" class="palabra-respuesta">Gracias</label>
+
+                <input type="checkbox" id="token-hasta" class="check-palabra">
+                <label for="token-hasta" class="palabra-respuesta">Hasta</label>
+
+                <input type="checkbox" id="token-nos" class="check-palabra">
+                <label for="token-nos" class="palabra-respuesta">nos</label>
+
+                <input type="checkbox" id="token-vemos" class="check-palabra">
+                <label for="token-vemos" class="palabra-respuesta">vemos</label>
+            </section>
+        </section>
+
+        <section class="comprobacion-error">
+            <input type="checkbox" id="disparador-comprobacion" class="check-comprobar">
+
+            <label for="disparador-comprobacion" class="btn-comprobar-falso">Comprobar Respuesta</label>
+
+            <section class="ejercicio-comprobacion-error">
+                <article class="mensaje-resultado">
+                    <p class="resultado-titulo">❌ Solución incorrecta</p>
+                    <p class="resultado-subtitulo">Respuesta correcta: Adiós, nos vemos mañana.</p>
+                </article>
+                <a href="./ingles-leccion-2.html" class="btn-reintentar-leccion">Reintentar</a>
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="footer-sitio">
+        <section class="footer-marca">
+            <div class="footer-logo">
+                <img class="logo-torre-footer" src="../imagenes/babylon_torre_recortada.png" alt="Babylon">
+                <img class="logo-texto-footer" src="../imagenes/babylon_text_recortado.png" alt="Texto Babylon">
+            </div>
+            <p class="copyright">&copy; 2026 Babylon. Todos los derechos reservados.</p>
+        </section>
+
+        <section class="footer-redes">
+            <a class="etiqueta-red" href="">
+                <img class="img-red-social" src="../imagenes/instagram-icono.png" alt="Instagram">
+                Instagram
+            </a>
+            <a class="etiqueta-red" href="">
+                <img class="img-red-social" src="../imagenes/tiktok-icono.png" alt="TikTok">
+                TikTok
+            </a>
+            <a class="etiqueta-red" href="">
+                <img class="img-red-social" src="../imagenes/youtube-icono.png" alt="YouTube">
+                YouTube
+            </a>
+        </section>
+    </footer>
+
+</body>
+
+</html>

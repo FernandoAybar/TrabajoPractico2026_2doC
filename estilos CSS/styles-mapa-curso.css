@@ -26,13 +26,16 @@
 }
 
 .curso-actual-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 2rem;
     width: 100%;
     background-color: #f1f8ff; 
     border: 0.2rem solid rgb(0, 136, 255);
     border-radius: 2rem;
     padding: 2rem;
-    box-shadow: 0 0.5rem 0 rgb(0, 136, 255);
-    margin-bottom: 1.5rem; 
+    box-shadow: 0 0.5rem 0 rgb(0, 136, 255);  
 }
 
 .curso-actual-info h3 {
@@ -210,4 +213,32 @@
 
 .relleno-barra-chino-sin-iniciar {
     width: 0%;
+}
+
+.volver-al-dashboard {
+    font-size: 1.4rem;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background-color: #ff4b4b; 
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    border: 0.2rem solid #c72c2c;
+    box-shadow: 0 0.4rem 0 #c72c2c; 
+    white-space: nowrap; 
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.volver-al-dashboard:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 0.8rem 0 #9e1b1b;
+    border-color: #c72c2c;
+}
+
+.volver-al-dashboard:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
 }

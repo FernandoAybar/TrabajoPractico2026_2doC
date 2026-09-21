@@ -1,0 +1,440 @@
+.leccion-actual {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 75vh;
+    padding: 2rem 0;
+    font-family: 'Hind Vadodara', sans-serif;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.ejercicio-barra-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 2rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0.5rem 0 #e5e5e5;
+    gap: 2rem;
+}
+
+.btn-salir-ejercicio {
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.barra-progreso-leccion {
+    flex: 1;
+    height: 1.6rem;
+    background-color: #e5e5e5;
+    border: solid 0.08rem black;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.relleno-progreso-leccion-1-ingles {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 136, 255);
+    border-radius: 1rem;
+}
+
+.porcentaje-leccion {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #3c3c3c;
+}
+
+.vidas-contador {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff4b4b;
+    white-space: nowrap;
+}
+
+.ejercicio-area-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 2.5rem;
+    padding: 3rem;
+    box-shadow: 0 0.6rem 0 #e5e5e5;
+    gap: 2rem;
+}
+
+.ejercicio-area-principal h2 {
+    font-size: 2.2rem;
+    color: #3c3c3c;
+    font-weight: 700;
+}
+
+.frase-a-traducir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(0, 85, 160);
+    gap: 1rem;
+}
+
+.btn-escuchar-frase {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.btn-escuchar-frase:hover {
+    background-color: rgba(0, 136, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.btn-escuchar-frase:active {
+    transform: scale(0.95);
+}
+
+.zona-respuesta,
+.banco-palabras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 6rem;
+    padding: 1rem;
+}
+
+.zona-respuesta {
+    border-bottom: 0.2rem dashed #cdcdcd;
+    margin-bottom: 1.5rem;
+}
+
+.zona-respuesta>.palabra-respuesta {
+    margin-bottom: 1.5rem;
+}
+
+.ejercicio-area-principal h3 {
+    font-size: 1.5rem;
+    color: #afafaf;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.check-palabra {
+    display: none;
+}
+
+.palabra-respuesta,
+.palabra-respuesta-usada {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: bold;
+    color: #3c3c3c;
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.4rem 0 #e5e5e5;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.palabra-respuesta:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.6rem 0 #d8d8d8;
+    background-color: #f8f9fa;
+}
+
+.palabra-respuesta:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+.check-palabra:checked+.palabra-respuesta,
+.check-palabra:checked+.palabra-respuesta-usada {
+    background-color: rgb(0, 136, 255);
+    color: white;
+    border-color: rgb(0, 85, 160);
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+.check-palabra:checked+.palabra-respuesta:hover,
+.check-palabra:checked+.palabra-respuesta-usada:hover {
+    /* El + es para seleccionar dos elementos hermanos qeu siguen inmediatanmente despues de la clase anterior */
+    background-color: rgb(0, 115, 215);
+    transform: translateY(0.4rem);
+}
+
+.palabra-respuesta-usada {
+    background-color: #e5e5e5;
+    color: #a0a0a0;
+    box-shadow: 0 0 0 transparent;
+    border-color: #d8d8d8;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.ejercicio-comprobacion-exito {
+    width: 100%;
+    background-color: #d7ffb8;
+    border: 0.2rem solid #58cc02;
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 0 #58cc02;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-comprobar {
+    font-size: 1.6rem;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background-color: #58cc02;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.4rem 0 #46a302;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.2s ease;
+}
+
+.btn-comprobar:hover {
+    filter: brightness(1.1);
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.6rem 0 #46a302;
+}
+
+.btn-comprobar:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+.comprobacion-exito {
+    width: 100%;
+    position: relative;
+}
+
+.check-comprobar {
+    display: none;
+}
+
+.btn-comprobar-falso {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(0, 136, 255);
+    padding: 1rem 4rem;
+    border: 0.2rem solid rgb(0, 85, 160);
+    border-radius: 1.5rem;
+    box-shadow: 0 0.4rem 0 rgb(0, 85, 160);
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease;
+}
+
+.btn-comprobar-falso:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.6rem 0 rgb(0, 66, 124);
+}
+
+.btn-comprobar-falso:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+.ejercicio-comprobacion-exito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    /* Para sacarlo del flujo de la pagina y poderlo esconder */
+    bottom: -25rem;
+    /* Le di un valor arbitrario bastante alto para asegurarme que quede escondido por fuera de la vista */
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #d7ffb8;
+    border-top: 0.3rem solid #58cc02;
+    border-radius: 2rem 2rem 0 0;
+    padding: 2.5rem 5rem;
+    box-shadow: 0 -0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+    z-index: 2000;
+    /* Este es para asegurarme que tape todo lo que necesito y no quede por detras de nada */
+    transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* El cubic bezier lo use para que de el efecto de rebote al subir */
+}
+
+
+.check-comprobar:checked~.ejercicio-comprobacion-exito {
+    /* Aca lo hago subir abandonando los -25rem que le meti antes */
+    bottom: 0;
+}
+
+
+.check-comprobar:checked~.btn-comprobar-falso {
+    display: none;
+}
+
+.mensaje-resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.resultado-titulo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #46a302;
+}
+
+.resultado-subtitulo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #58cc02;
+}
+
+.btn-continuar-leccion {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background-color: #58cc02;
+    padding: 1.2rem 4rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.4rem 0 #46a302;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.2s ease;
+}
+
+.btn-continuar-leccion:hover {
+    filter: brightness(1.1);
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.6rem 0 #46a302;
+}
+
+.btn-continuar-leccion:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+.relleno-progreso-leccion-2-ingles {
+    height: 100%;
+    width: 40%;
+    background-color: rgb(0, 136, 255);
+    border-radius: 1rem;
+}
+
+.comprobacion-error {
+    width: 100%;
+    position: relative;
+}
+
+.ejercicio-comprobacion-error {
+    position: fixed;
+    bottom: -25rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fdd5d5;
+    border-top: 0.3rem solid #ff4b4b;
+    border-radius: 2rem 2rem 0 0;
+    padding: 2.5rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+    z-index: 2000;
+    transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.check-comprobar:checked~.ejercicio-comprobacion-error {
+    bottom: 0;
+}
+
+.check-comprobar:checked~.btn-comprobar-falso {
+    display: none;
+}
+
+.ejercicio-comprobacion-error .resultado-titulo {
+    color: #ea2b2b;
+}
+
+.ejercicio-comprobacion-error .resultado-subtitulo {
+    color: #ff4b4b;
+}
+
+.btn-reintentar-leccion {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background-color: #ff4b4b;
+    padding: 1.2rem 4rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.4rem 0 #ea2b2b;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.2s ease;
+}
+
+.btn-reintentar-leccion:hover {
+    filter: brightness(1.1);
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.6rem 0 #ea2b2b;
+}
+
+.btn-reintentar-leccion:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+.relleno-progreso-leccion-1-aleman,
+.relleno-progreso-leccion-2-aleman {
+    height: 100%;
+    background-color: rgb(0, 136, 255);
+    border-radius: 1rem;
+}
+
+.relleno-progreso-leccion-1-aleman {
+    width: 100%;
+}
+
+.relleno-progreso-leccion-2-aleman {
+    width: 30%;
+}
+
+.relleno-progreso-leccion-1-chino {
+    height: 100%;
+    width: 0%;
+    background-color: rgb(0, 136, 255);
+    border-radius: 1rem;
+}
