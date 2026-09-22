@@ -8,8 +8,6 @@
     margin-bottom: 2rem;
 }
 
-/* --- Encabezado / liga actual (mismo patrón que .curso-actual de mapa-curso) --- */
-
 .ranking-actual {
     display: flex;
     flex-direction: column;
@@ -23,6 +21,7 @@
     color: #3c3c3c;
     font-weight: 700;
     margin: 0;
+    padding-bottom: 1.5rem;
 }
 
 .bloque-trofeo {
@@ -113,13 +112,18 @@
     border-color: rgb(0, 85, 160);
 }
 
-/* --- Podio semanal (mismo patrón de tarjeta que .leccion-nodo / .producto-tarjeta) --- */
-
 .podio-semanal {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
+}
+
+.podio-semanal h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
 }
 
 .podio-semanal h3,
@@ -223,8 +227,6 @@
     border-color: #ffda66;
 }
 
-/* Resaltado del usuario autenticado: independiente de la medalla/puesto,
-   para que siempre se distinga sea cual sea su posición en la liga */
 .usuario-actual {
     border-color: rgb(0, 136, 255);
     box-shadow: 0 0.6rem 0 rgb(0, 136, 255);
@@ -243,8 +245,6 @@
 .puesto-bronce {
     order: 3;
 }
-
-/* --- Resto de la tabla (mismo patrón que las tarjetas blancas del sitio) --- */
 
 .resto-tabla {
     display: flex;
@@ -305,15 +305,11 @@
     vertical-align: middle;
 }
 
-/* Misma lógica que .usuario-actual del podio, pero aplicada a una fila
-   de la tabla: se usa si el usuario autenticado queda fuera del podio */
 .fila-usuario-actual td {
     background-color: #f1f8ff;
     font-weight: 700;
     color: rgb(0, 85, 160);
 }
-
-/* --- Mi resumen (mismo patrón que .panel-estadisticas / .stat-item del dashboard) --- */
 
 .mi-resumen-ranking {
     display: flex;
@@ -425,6 +421,10 @@
         flex-direction: column;
         align-items: center;
         gap: 1.2rem;
+    }
+
+    .podio-semanal h3 span{
+        display: none;   
     }
 
     .puesto-podio,
