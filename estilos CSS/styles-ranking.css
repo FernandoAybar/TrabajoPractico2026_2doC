@@ -1,0 +1,467 @@
+.ranking-general {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    padding: 2rem 0;
+    font-family: 'Hind Vadodara', sans-serif;
+    margin-bottom: 2rem;
+}
+
+/* --- Encabezado / liga actual (mismo patrón que .curso-actual de mapa-curso) --- */
+
+.ranking-actual {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+}
+
+.ranking-actual h2 {
+    font-size: 2.4rem;
+    color: #3c3c3c;
+    font-weight: 700;
+    margin: 0;
+}
+
+.bloque-trofeo {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.ranking-actual-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+    text-align: center;
+    background-color: #f1f8ff;
+    border: 0.2rem solid rgb(0, 136, 255);
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 0 rgb(0, 136, 255);
+}
+
+.ranking-actual-info h3 {
+    font-size: 1.8rem;
+    color: #3c3c3c;
+    font-weight: 700;
+}
+
+.ranking-actual-info p {
+    font-size: 1.3rem;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.selector-liga {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.selector-liga-etiqueta {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #3c3c3c;
+}
+
+.check-liga {
+    display: none;
+}
+
+.liga-nombre {
+    display: none;
+}
+
+#liga-bronce:checked ~ .liga-nombre-bronce,
+#liga-plata:checked ~ .liga-nombre-plata,
+#liga-oro:checked ~ .liga-nombre-oro,
+#liga-diamante:checked ~ .liga-nombre-diamante {
+    display: block;
+}
+
+.btn-liga {
+    font-size: 1.3rem;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 600;
+    color: #3c3c3c;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 1.2rem;
+    padding: 0.7rem 1.4rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-liga:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-0.1rem);
+}
+
+#liga-bronce:checked ~ .selector-liga .btn-liga[for="liga-bronce"],
+#liga-plata:checked ~ .selector-liga .btn-liga[for="liga-plata"],
+#liga-oro:checked ~ .selector-liga .btn-liga[for="liga-oro"],
+#liga-diamante:checked ~ .selector-liga .btn-liga[for="liga-diamante"] {
+    background-color: rgb(0, 136, 255);
+    color: white;
+    border-color: rgb(0, 85, 160);
+}
+
+/* --- Podio semanal (mismo patrón de tarjeta que .leccion-nodo / .producto-tarjeta) --- */
+
+.podio-semanal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.podio-semanal h3,
+.resto-tabla h3,
+.mi-resumen-ranking h3 {
+    font-size: 1.8rem;
+    color: #3c3c3c;
+    font-weight: 700;
+}
+
+.podio-lista {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2rem;
+    list-style: none;
+    width: 100%;
+}
+
+.puesto-podio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    flex: 0 0 22%;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 2rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 0.6rem 0 #e5e5e5;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.puesto-podio:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1rem 0 #d8d8d8;
+    border-color: #cdcdcd;
+}
+
+.podio-medalla {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.podio-avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.15rem solid #e5e5e5;
+}
+
+.podio-puesto-numero {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #afafaf;
+    margin: 0;
+}
+
+.puesto-podio h4 {
+    font-size: 1.4rem;
+    color: #3c3c3c;
+    font-weight: 700;
+}
+
+.podio-xp {
+    font-size: 1.3rem;
+    color: rgb(0, 136, 255);
+    font-weight: bold;
+}
+
+.podio-estado {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #46a302;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.puesto-oro {
+    order: 2;
+    border-color: #ffda66;
+    background-color: #fffdf0;
+    box-shadow: 0 0.8rem 0 #ffda66;
+    padding-top: 2.5rem;
+}
+
+.puesto-oro:hover {
+    border-color: #f0c243;
+    box-shadow: 0 1.2rem 0 #e0b230;
+}
+
+.puesto-oro .podio-medalla {
+    font-size: 3.8rem;
+}
+
+.puesto-oro .podio-avatar {
+    width: 6rem;
+    height: 6rem;
+    border-color: #ffda66;
+}
+
+/* Resaltado del usuario autenticado: independiente de la medalla/puesto,
+   para que siempre se distinga sea cual sea su posición en la liga */
+.usuario-actual {
+    border-color: rgb(0, 136, 255);
+    box-shadow: 0 0.6rem 0 rgb(0, 136, 255);
+    background-color: #f1f8ff;
+}
+
+.usuario-actual:hover {
+    border-color: rgb(0, 85, 160);
+    box-shadow: 0 1rem 0 rgb(0, 85, 160);
+}
+
+.puesto-plata {
+    order: 1;
+}
+
+.puesto-bronce {
+    order: 3;
+}
+
+/* --- Resto de la tabla (mismo patrón que las tarjetas blancas del sitio) --- */
+
+.resto-tabla {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.tabla-ranking {
+    width: 100%;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 2rem;
+    box-shadow: 0 0.6rem 0 #e5e5e5;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.tabla-ranking thead th {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #afafaf;
+    font-weight: bold;
+    text-align: left;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 0.15rem solid #e5e5e5;
+}
+
+.tabla-ranking tbody td {
+    font-size: 1.4rem;
+    color: #3c3c3c;
+    font-weight: 600;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 0.15rem solid #e5e5e5;
+}
+
+.tabla-ranking tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.estado-normal {
+    color: #afafaf;
+    font-weight: bold;
+}
+
+.estado-ascenso {
+    color: #46a302;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tabla-avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.12rem solid #e5e5e5;
+    vertical-align: middle;
+}
+
+/* Misma lógica que .usuario-actual del podio, pero aplicada a una fila
+   de la tabla: se usa si el usuario autenticado queda fuera del podio */
+.fila-usuario-actual td {
+    background-color: #f1f8ff;
+    font-weight: 700;
+    color: rgb(0, 85, 160);
+}
+
+/* --- Mi resumen (mismo patrón que .panel-estadisticas / .stat-item del dashboard) --- */
+
+.mi-resumen-ranking {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.panel-resumen-ranking {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 2rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0.5rem 0 #e5e5e5;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-icono {
+    font-size: 2.5rem;
+}
+
+.stat-info h4 {
+    font-size: 1.6rem;
+    color: #3c3c3c;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.stat-info p {
+    font-size: 1.1rem;
+    color: #afafaf;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+
+    /*Query tablet-notebook*/
+    .ranking-actual h2 {
+        font-size: 2rem;
+    }
+
+    .ranking-actual-info {
+        padding: 1.5rem;
+    }
+
+    .podio-lista {
+        gap: 1.5rem;
+    }
+
+    .puesto-podio {
+        flex: 0 0 28%;
+        padding: 1.5rem 1rem;
+    }
+
+    .tabla-ranking thead th,
+    .tabla-ranking tbody td {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+
+    .panel-estadisticas,
+    .panel-resumen-ranking {
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .stat-item {
+        flex: 0 0 40%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /*Query mobile*/
+    .ranking-general {
+        padding: 1.5rem 0;
+        gap: 2.5rem;
+    }
+
+    .ranking-actual h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .ranking-actual-info {
+        padding: 1.5rem;
+    }
+
+    .selector-liga {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .podio-lista {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .puesto-podio,
+    .puesto-oro,
+    .puesto-bronce,
+    .puesto-plata {
+        order: 0;
+        flex: 1 0 100%;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .puesto-oro {
+        order: -1;
+    }
+
+    .tabla-ranking {
+        overflow-x: auto;
+        display: block;
+    }
+
+    .tabla-ranking thead th,
+    .tabla-ranking tbody td {
+        font-size: 1.1rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .panel-resumen-ranking {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    .stat-item {
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 1rem;
+    }
+}

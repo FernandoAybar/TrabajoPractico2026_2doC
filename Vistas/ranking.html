@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babylon - Ranking</title>
+    <link rel="stylesheet" href="../estilos CSS/styles-header-body-footer.css">
+    <link rel="stylesheet" href="../estilos CSS/styles-ranking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <section class="logo">
+                <img class="logo-torre" src="../imagenes/babylon_torre_recortada.png" alt="Babylon logo">
+                <img class="logo-texto" src="../imagenes/babylon_text_recortado.png" alt="Texto Babylon">
+            </section>
+            <section class="links-de-nav">
+                <a class="etiqueta-del-nav" href="./dashboard.html">Cursos</a>
+                <a class="etiqueta-del-nav" href="./ranking.html">Ranking</a>
+                <a class="etiqueta-del-nav" href="./tienda.html">Tienda</a>
+                <a class="etiqueta-del-nav" href="./mi-perfil.html">Mi Perfil</a>
+                <a class="etiqueta-del-nav" href="../index.html">Cerrar sesión</a>
+            </section>
+        </nav>
+    </header>
+
+    <main class="ranking-general">
+
+        <section class="ranking-actual">
+            <h2>Ranking Semanal <span class="bloque-trofeo">🏆</span></h2>
+            <article class="ranking-actual-info">
+
+                <input type="radio" id="liga-bronce" name="liga" class="check-liga">
+                <input type="radio" id="liga-plata" name="liga" class="check-liga">
+                <input type="radio" id="liga-oro" name="liga" class="check-liga" checked>
+                <input type="radio" id="liga-diamante" name="liga" class="check-liga">
+
+                <h3 class="liga-nombre liga-nombre-bronce">Liga Bronce</h3>
+                <h3 class="liga-nombre liga-nombre-plata">Liga Plata</h3>
+                <h3 class="liga-nombre liga-nombre-oro">Liga Oro</h3>
+                <h3 class="liga-nombre liga-nombre-diamante">Liga Diamante</h3>
+
+                <p>Los 5 primeros puestos ascienden a la siguiente liga al cerrar la semana</p>
+
+                <section class="selector-liga">
+                    <p class="selector-liga-etiqueta">Ver liga:</p>
+                    <label for="liga-bronce" class="btn-liga">Bronce</label>
+                    <label for="liga-plata" class="btn-liga">Plata</label>
+                    <label for="liga-oro" class="btn-liga">Oro</label>
+                    <label for="liga-diamante" class="btn-liga">Diamante</label>
+                </section>
+            </article>
+        </section>
+
+        <section class="podio-semanal">
+            <h3>Podio de la semana</h3>
+
+            <ol class="podio-lista">
+                <li class="puesto-podio puesto-plata usuario-actual">
+                    <p class="podio-medalla">🥈</p>
+                    <img class="podio-avatar" src="../imagenes/avatar-generico.png" alt="Avatar de JuanPerez">
+                    <p class="podio-puesto-numero">#2</p>
+                    <h4>JuanPerez (Tú)</h4>
+                    <p class="podio-xp">720 XP</p>
+                    <p class="podio-estado">Zona de Ascenso</p>
+                </li>
+
+                <li class="puesto-podio puesto-oro">
+                    <p class="podio-medalla">🥇</p>
+                    <img class="podio-avatar" src="../imagenes/avatar-generico.png" alt="Avatar de MariaG_22">
+                    <p class="podio-puesto-numero">#1</p>
+                    <h4>MariaG_22</h4>
+                    <p class="podio-xp">850 XP</p>
+                    <p class="podio-estado">Zona de Ascenso</p>
+                </li>
+
+                <li class="puesto-podio puesto-bronce">
+                    <p class="podio-medalla">🥉</p>
+                    <img class="podio-avatar" src="../imagenes/avatar-generico.png" alt="Avatar de Carlos_Dev">
+                    <p class="podio-puesto-numero">#3</p>
+                    <h4>Carlos_Dev</h4>
+                    <p class="podio-xp">610 XP</p>
+                    <p class="podio-estado">Zona de Ascenso</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="resto-tabla">
+            <h3>Resto de la liga</h3>
+
+            <table class="tabla-ranking">
+                <thead>
+                    <tr>
+                        <th scope="col">Puesto</th>
+                        <th scope="col">Avatar</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">XP Semanal</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>4</td>
+                        <td><img class="tabla-avatar" src="../imagenes/avatar-generico.png" alt="Avatar de AnaCode"></td>
+                        <td>AnaCode</td>
+                        <td>580 XP</td>
+                        <td class="estado-ascenso">Zona de Ascenso</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><img class="tabla-avatar" src="../imagenes/avatar-generico.png" alt="Avatar de LeoTech"></td>
+                        <td>LeoTech</td>
+                        <td>540 XP</td>
+                        <td class="estado-ascenso">Zona de Ascenso</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><img class="tabla-avatar" src="../imagenes/avatar-generico.png" alt="Avatar de Nico_Ok"></td>
+                        <td>Nico_Ok</td>
+                        <td>410 XP</td>
+                        <td class="estado-normal">Se mantiene</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><img class="tabla-avatar" src="../imagenes/avatar-generico.png" alt="Avatar de Flor_Est"></td>
+                        <td>Flor_Est</td>
+                        <td>380 XP</td>
+                        <td class="estado-normal">Se mantiene</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="mi-resumen-ranking">
+            <h3>Mi Resumen</h3>
+
+            <section class="panel-resumen-ranking">
+                <article class="stat-item">
+                    <span class="stat-icono">🏅</span>
+                    <div class="stat-info">
+                        <h4>#2</h4>
+                        <p>Puesto actual</p>
+                    </div>
+                </article>
+
+                <article class="stat-item">
+                    <span class="stat-icono">⚡</span>
+                    <div class="stat-info">
+                        <h4>720 XP</h4>
+                        <p>Experiencia semanal</p>
+                    </div>
+                </article>
+
+                <article class="stat-item">
+                    <span class="stat-icono">🔥</span>
+                    <div class="stat-info">
+                        <h4>7 Días</h4>
+                        <p>Racha de estudio</p>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="footer-sitio">
+        <section class="footer-marca">
+            <div class="footer-logo">
+                <img class="logo-torre-footer" src="../imagenes/babylon_torre_recortada.png" alt="Babylon">
+                <img class="logo-texto-footer" src="../imagenes/babylon_text_recortado.png" alt="Texto Babylon">
+            </div>
+            <p class="copyright">&copy; 2026 Babylon. Todos los derechos reservados.</p>
+        </section>
+
+        <section class="footer-redes">
+            <a class="etiqueta-red" href="">
+                <img class="img-red-social" src="../imagenes/instagram-icono.png" alt="Instagram">
+                Instagram
+            </a>
+            <a class="etiqueta-red" href="">
+                <img class="img-red-social" src="../imagenes/tiktok-icono.png" alt="TikTok">
+                TikTok
+            </a>
+            <a class="etiqueta-red" href="">
+                <img class="img-red-social" src="../imagenes/youtube-icono.png" alt="YouTube">
+                YouTube
+            </a>
+        </section>
+    </footer>
+
+</body>
+
+</html>
