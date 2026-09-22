@@ -130,6 +130,22 @@ legend{
     
 }
 
+.crear_cuenta_recuperar{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+}
+
+.crear_cuenta_recuperar .crear{
+    font-size: 1.1rem;
+}
+
+.crear_cuenta_recuperar .recuperar{
+    font-size: 0.6rem;
+}
+
 
 
 .icono_l{
