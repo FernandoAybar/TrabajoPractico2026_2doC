@@ -17,8 +17,8 @@ main .blur{
 
 .icono_torre{
     transform: rotate(35DEG);
-    height: 4rem;
-    width: 4rem;
+    height: 4.4rem;
+    width: 4.4rem;
     position: absolute;
     top: 3.75rem;
     right: 3.5rem;
@@ -83,11 +83,13 @@ main .grid_login{
     
 }
 
+
+/*
 .grid_login .Inicio_titulo{
     grid-column: 1/-1;
     text-align: center;
     font-size: 0.5rem;
-}
+}*/
 
 
 .L_usuario{
@@ -101,6 +103,24 @@ main .grid_login{
     border-radius: 5%;
     box-shadow: 0 0.4rem 0 rgb(0, 85, 160);
     text-transform: uppercase;
+}
+
+.seccion{
+    height: 98%;
+    width: 90%;
+    border:0.2rem solid #e5e5e5;
+    border-radius: 20px;
+
+}
+
+
+legend{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #f7f6f6;
+    margin: auto;
+    padding: 0 2rem ;
+    
 }
 
 .email_usuario, .contraseña_usuario{
