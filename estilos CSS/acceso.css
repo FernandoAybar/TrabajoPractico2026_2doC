@@ -1,21 +1,21 @@
-main{
+main {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     font-family: 'Hind Vadodara', sans-serif;
-    
+
 }
 
 
-main .blur{
+main .blur {
     position: relative;
     height: 100%;
     width: 95%;
     filter: blur(5px) brightness(96%);
 }
 
-.icono_torre{
+.icono_torre {
     transform: rotate(35DEG);
     height: 4.4rem;
     width: 4.4rem;
@@ -23,31 +23,33 @@ main .blur{
     top: 3.75rem;
     right: 3.5rem;
     animation: vibrar-pausa 4s infinite;
-    
+
 }
 
 
 
 
-.Nombre_titulo{
+.Nombre_titulo {
     font-family: "Fredoka", sans-serif;
     font-weight: bold;
     font-size: 2rem;
     position: absolute;
-    top:80px;
+    top: 80px;
     left: 5px;
     text-align: center;
     color: rgb(0, 0, 0);
     font-variation-settings:
-    "wdth" 700;
-    animation: typing 5s forwards; /* prepara la animacion del @keyframes que esta debajo */
-    white-space: nowrap; /* permite que no tenga salto de linea integra todo en una linea*/
+        "wdth" 700;
+    animation: typing 5s forwards;
+    /* prepara la animacion del @keyframes que esta debajo */
+    white-space: nowrap;
+    /* permite que no tenga salto de linea integra todo en una linea*/
 
 }
 
 @keyframes typing {
     from {
-        width:0;
+        width: 0;
     }
 
     to {
@@ -57,30 +59,52 @@ main .blur{
 
 
 @keyframes vibrar-pausa {
-      0% { transform: translate(0, 0) rotate(-10deg); }
+    0% {
+        transform: translate(0, 0) rotate(-10deg);
+    }
 
-  /* Vibraciones sumadas a la inclinación base */
-  2% { transform: translate(-3px, 1px) rotate(12deg); } /* -10deg + -2deg */
-  4% { transform: translate(3px, -1px) rotate(8deg); }  /* -10deg + +2deg */
-  6% { transform: translate(-3px, -1px) rotate(11deg); } /* -10deg + -1deg */
-  8% { transform: translate(3px, 1px) rotate(9deg); }   /* -10deg + +1deg */
+    /* Vibraciones sumadas a la inclinación base */
+    2% {
+        transform: translate(-3px, 1px) rotate(12deg);
+    }
 
-  /* Fin de vibración: Vuelve a la inclinación base pura */
-  10% { transform: translate(0, 0) rotate(10deg); }
+    /* -10deg + -2deg */
+    4% {
+        transform: translate(3px, -1px) rotate(8deg);
+    }
 
-  /* --- FASE DE PAUSA (Del 11% al 100%) ---
+    /* -10deg + +2deg */
+    6% {
+        transform: translate(-3px, -1px) rotate(11deg);
+    }
+
+    /* -10deg + -1deg */
+    8% {
+        transform: translate(3px, 1px) rotate(9deg);
+    }
+
+    /* -10deg + +1deg */
+
+    /* Fin de vibración: Vuelve a la inclinación base pura */
+    10% {
+        transform: translate(0, 0) rotate(10deg);
+    }
+
+    /* --- FASE DE PAUSA (Del 11% al 100%) ---
      Mantiene la inclinación base pura
   */
-  100% { transform: translate(0, 0) rotate(10deg); }
+    100% {
+        transform: translate(0, 0) rotate(10deg);
+    }
 }
 
-main .grid_login{
+main .grid_login {
     position: absolute;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     gap: 1.5rem;
-    
+
 }
 
 
@@ -92,7 +116,7 @@ main .grid_login{
 }*/
 
 
-.L_usuario{
+.L_usuario {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,74 +129,76 @@ main .grid_login{
     text-transform: uppercase;
 }
 
-.seccion{
+.seccion {
     height: 98%;
     width: 90%;
-    border:0.2rem solid #e5e5e5;
+    border: 0.2rem solid #e5e5e5;
     border-radius: 20px;
 
 }
 
 
-legend{
+legend {
     font-size: 1.4rem;
     font-weight: bold;
     color: #f7f6f6;
     margin: auto;
-    padding: 0 2rem ;
-    
+    padding: 0 2rem;
+
 }
 
-.email_usuario, .contraseña_usuario{
+.email_usuario,
+.contraseña_usuario {
     display: flex;
-   
 
-    
+
+
 }
 
-.crear_cuenta_recuperar{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 1rem;
+.crear_cuenta_recuperar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
-.crear_cuenta_recuperar .crear{
+.crear_cuenta_recuperar .crear {
     font-size: 1.1rem;
 }
 
-.crear_cuenta_recuperar .recuperar{
+.crear_cuenta_recuperar .recuperar {
     font-size: 0.6rem;
 }
 
 
 
-.icono_l{
+.icono_l {
     background-color: black;
     border-radius: 150px 0 0 150px;
     width: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-form{
+form {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
+
 }
 
-form i{
+form i {
     color: rgb(255, 255, 255);
     font-size: 0.8rem;
-    
+
 }
-form input{
+
+form input {
     border: 0.1rem solid black;
     padding-left: 1rem;
     border-radius: 0 150px 150px 0;
@@ -181,39 +207,135 @@ form input{
 
 
 
-.Imagen_Idioma , .Imagen_Idioma img{
+.Imagen_Idioma,
+.Imagen_Idioma img {
     display: none;
 }
 
 
 
+@media (min-width:481px) and (max-width:1023px) {
 
 
 
-
-
-
-@media (min-width:1024px){
-
-.Nombre_titulo{
-    font-size: 7rem;
-    top:2px;
-    left: 35px;
+    .L_usuario {
+ 
+    border-radius: 20px;
+    box-shadow: 0 0.4rem 0 rgb(0, 85, 160);
+    
 }
 
+     main .grid_login {
 
-main .grid_login{
 
-
-    /*faltante por vista ampliada 
+        /*faltante por vista ampliada 
     
     */
- grid-template-columns: repeat(2,1fr);
- grid-template-rows: 1fr;
- grid-row-gap: 2rem;
+        grid-template-columns: 1fr 0.5fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 2rem;
+
+    }
+
+    .Imagen_Idioma,
+    .Imagen_Idioma img {
+        display:block;
+    }
+
+
+
+    .Imagen_Idioma img {
+        border-radius: 150PX 0 150PX 0;
+    }
+
+
+    .icono_torre {
+    top: 3.75rem;
+    right: 6rem;
 
 }
 
+.seccion {
+    height: 95%;
+    width: 90%;
+
+}
+
+legend {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+
+}
+
+
+
+/*
+
+.email_usuario,
+.contraseña_usuario {
+    display: flex;
+width: fit-content;*/ 
+
+.email_usuario input, .contraseña_usuario input{
+    width: 9rem;
+    padding-left: 0.3rem;
+    
+}
+
+
+form input::placeholder{
+
+    font-size: 0.6rem;
+}
+
+
+
+
+}
+
+
+
+
+
+@media (min-width:1024px) {
+
+     .icono_torre {
+    top: 0.1rem;
+    right: 6em;
+    width: 8rem;
+    height: 8rem;
+
+
+}
+
+    .Nombre_titulo {
+        font-size: 7rem;
+        top: 2px;
+        left: 35px;
+    }
+
+
+    main .grid_login {
+
+
+        /*faltante por vista ampliada 
+    
+    */
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 2rem;
+
+    }
+
+     .Imagen_Idioma,
+    .Imagen_Idioma img {
+        display:block;
+    }
+
+    
+    .Imagen_Idioma img {
+        border-radius: 150PX 0 150PX 0;
+    }
 
 
 }
