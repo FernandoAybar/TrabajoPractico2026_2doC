@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(203, 231, 255, 0.855);
+    font-family: 'Hind Vadodara', sans-serif;
+    padding: 3rem 2rem;
+    overflow-y: auto;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 42rem;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 3rem;
+    padding: 2.5rem 3rem;
+    box-shadow: 0 0.8rem 0 #e5e5e5;
+}
+
+.login-marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.3rem;
+    margin-bottom: 1.8rem;
+}
+
+.login-logo-torre {
+    width: auto;
+    height: 6rem;
+    object-fit: contain;
+    animation: vibrar-pausa 4s infinite;
+}
+
+
+@keyframes vibrar-pausa {
+    0% {
+        transform: translate(0, 0) rotate(-10deg);
+    }
+
+    2% {
+        transform: translate(-3px, 1px) rotate(12deg);
+    }
+
+    4% {
+        transform: translate(3px, -1px) rotate(8deg);
+    }
+
+    6% {
+        transform: translate(-3px, -1px) rotate(11deg);
+    }
+
+    8% {
+        transform: translate(3px, 1px) rotate(9deg);
+    }
+
+    10% {
+        transform: translate(0, 0) rotate(10deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(10deg);
+    }
+}
+
+
+.login-logo-texto {
+    width: auto;
+    height: 3rem;
+    object-fit: contain;
+    margin-bottom: 0.3rem;
+}
+
+.login-marca h1 {
+    font-size: 2rem;
+    color: #3c3c3c;
+    font-weight: 700;
+}
+
+.login-marca p {
+    font-size: 1.2rem;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.Logo_principal {
+    width: 4rem;
+    height: 4rem;
+    margin: auto;
+    background-color: #3c3c3c;
+    border-radius: 50%;
+
+}
+
+.login-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.campo-grupo-login {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 100%;
+}
+
+.campo-grupo-login label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3c3c3c;
+}
+
+.campo-grupo-login input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-family: 'Hind Vadodara', sans-serif;
+    color: #3c3c3c;
+    background-color: #f8f9fa;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 1.5rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.campo-grupo-login input:focus {
+    border-color: rgb(0, 136, 255);
+}
+
+.login-opciones-enlaces {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.link-olvido {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(0, 136, 255);
+    text-decoration: none;
+}
+
+.link-olvido:hover {
+    text-decoration: underline;
+}
+
+.btn-ingresar {
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(0, 136, 255);
+    padding: 0.6rem;
+    border: 0.2rem solid rgb(0, 85, 160);
+    border-radius: 1.5rem;
+    box-shadow: 0 0.5rem 0 rgb(0, 85, 160);
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-ingresar:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 0.9rem 0 rgb(0, 66, 124);
+}
+
+.btn-ingresar:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+.divisor-login {
+    border: none;
+    border-top: 0.15rem solid #3c3c3c3b;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.login-registro-invitacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.login-registro-invitacion p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #7a7a7a;
+}
+
+.btn-crear-cuenta {
+    display: block;
+    font-size: 1.4rem;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(0, 136, 255);
+    background-color: white;
+    padding: 0.8rem;
+    border: 0.2rem solid #e5e5e5;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.4rem 0 #e5e5e5;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-crear-cuenta:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-0.4rem);
+    box-shadow: 0 0.8rem 0 #cdcdcd;
+}
+
+.btn-crear-cuenta:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+.check-recuperar-estado {
+    display: none;
+}
+
+.bloque-recuperar-paso-2 {
+    display: none;
+}
+
+.bloque-recuperar-paso-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.check-recuperar-estado:checked~.bloque-recuperar-paso-1 {
+    display: none;
+}
+
+.check-recuperar-estado:checked~.bloque-recuperar-paso-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+
+@media (max-width: 480px) {
+    .login-body {
+        padding: 1rem;
+        overflow-y: auto;
+    }
+
+    .login-container {
+        padding: 2rem 1.5rem;
+        border-radius: 2rem;
+        box-shadow: 0 0.6rem 0 #e5e5e5;
+    }
+
+    .login-logo-torre {
+        height: 5rem;
+    }
+
+    .login-logo-texto {
+        height: 2.5rem;
+    }
+
+    .login-marca h1 {
+        font-size: 1.8rem;
+    }
+}

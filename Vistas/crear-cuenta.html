@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos CSS/styles-login.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../imagenes/babylon_torre_recortada.png">
+    <title>Babylon - Crear Cuenta</title>
+</head>
+ 
+<body class="login-body">
+ 
+    <main class="login-container">
+ 
+        <section class="login-marca">
+            <img class="login-logo-torre" src="../imagenes/babylon_torre_recortada.png" alt="Babylon logo">
+            <img class="login-logo-texto" src="../imagenes/babylon_text_recortado.png" alt="Texto Babylon">
+            <h1>Crea tu cuenta</h1>
+            <p>Únete a la comunidad de idiomas de Babylon</p>
+        </section>
+ 
+        <form class="login-formulario" action="#" method="post">
+            
+            <section class="campo-grupo-login">
+                <label for="nombre-registro">Nombre completo:</label>
+                <input type="text" id="nombre-registro" name="fullname" placeholder="Ingresa tu nombre y apellido" required>
+            </section>
+ 
+            <section class="campo-grupo-login">
+                <label for="usuario-registro">Nombre de usuario:</label>
+                <input type="text" id="usuario-registro" name="username" placeholder="Crea tu usuario_web" required>
+            </section>
+ 
+            <section class="campo-grupo-login">
+                <label for="email-registro">Email institucional:</label>
+                <input type="email" id="email-registro" name="email" placeholder="ejemplo@alumnos.unlam.edu.ar" required>
+            </section>
+ 
+            <section class="campo-grupo-login">
+                <label for="password-registro">Contraseña:</label>
+                <input type="password" id="password-registro" name="password" placeholder="Mínimo 8 caracteres" required>
+            </section>
+ 
+            <section class="campo-grupo-login">
+                <label for="confirm-password-registro">Confirmar contraseña:</label>
+                <input type="password" id="confirm-password-registro" name="confirm_password" placeholder="Repite tu contraseña" required>
+            </section>
+ 
+            <button class="btn-ingresar" type="submit"> Registrarse</button> 
+ 
+            <hr class="divisor-login">
+ 
+            <section class="login-registro-invitacion">
+                <p>¿Ya tienes una cuenta?</p>
+                <a href="../index.html" class="btn-crear-cuenta">Iniciar Sesión</a>
+            </section>
+ 
+        </form>
+ 
+    </main>
+ 
+</body>
+ 
+</html>

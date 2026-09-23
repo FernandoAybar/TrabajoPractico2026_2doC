@@ -5,66 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="./estilos CSS/body.css">
-    <link rel="stylesheet" href="./estilos CSS/acceso.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@700&display=swap" rel="stylesheet">
-     <title>Babylon - Log-in</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./estilos CSS/styles-login.css">
+    <link rel="icon" type="image/png" href="./imagenes/babylon_torre_recortada.png">
+    <title>Babylon - Inicio Sesi&oacute;n</title>
 </head>
 
-<body>
-    <main>
-        <img src="./imagenes/FondoIdioma.jpeg" alt="fondo de pantalla" class="blur">
-        <img src="./imagenes/babylon_torre_recortada.png" alt="imagen de torre babylon" class="icono_torre">
-        <h1 class="Nombre_titulo"> B a b y l o n</h1>
+<body class="login-body">
 
-        <section class="container grid_login">
-          <!---  <h2 class="Inicio_titulo"> Inicio de sesi&oacute;n </h2>
-        --->
-            <section class="L_usuario">
-                <fieldset class="seccion">
-                    <legend> Inicio de Sesi&oacute;n </legend>
-                <form action="./Vistas/dashboard.html" method="post" id="formulario_acceso">
+    <main class="login-conteiner">
 
-                    <img src="./imagenes/Individual.gif" alt="Logo" class="Logo_principal">
-
-                    <div class="email_usuario">
-                        <div class="icono_l">
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                        <div class="dato_l">
-                            <label for="email"></label>
-                            <input type="email" id="email" name="email" placeholder="Nombre de usuario">
-                        </div>
-
-                    </div>
-                    <div class="contraseña_usuario">
-                        <div class="icono_l">
-                            <i class="fa-solid fa-unlock"></i>
-                        </div>
-                        <div class="dato_l">
-                            <label for="pass"></label>
-                            <input type="password" name="pass" id="pass" placeholder="Contraseña">
-                        </div>
-                    </div>
-                    <button class="ingresar" type="submit"> Ingresar</button>
-                    <div class="crear_cuenta_recuperar">
-                        <a href="#" class="crear"> Crear Cuenta</a>
-                        <a href="#" class="recuperar">Recuperar Contraseña</a>
-                    </div>
-
-                </form>
-
-                </fieldset>
-            </section>
-
-            <section class="Imagen_Idioma">
-                <img src="./imagenes/saludos.jpeg" alt="Imagen de saludos" width="350" height="480">
-            </section>
-
+        <section class="login-marca">
+            <img src="./imagenes/babylon_torre_recortada.png" alt="Babylon Torre Logo" class="login-logo-torre">
+            <img src="./imagenes/babylon_text_recortado.png" alt="Babylon nombre" class="login-logo-texto">
+            <h1>!Te damos la bienbenida!</h1>
+            <p>Aprende idiomas de forma l&uacute;dica y competitiva</p>
         </section>
+
+
+
+        <form action="./Vistas/dashboard.html" method="post" class="login-formulario">
+
+            <img src="./imagenes/Individual.gif" alt="Logo" class="Logo_principal">
+
+            <section class="campo-grupo-login">
+                <label for="usuario-login">Nombre de usuario</label>
+                <input type="text" id="usuario-login" name="usuario-login" placeholder="Ingresa tu nombre de usuario" required>
+            </section>
+
+
+            <section class="campo-grupo-login">
+                <label for="pass">Contraseña</label>
+                <input type="password" name="pass" id="pass" placeholder="Ingresa tu Contraseña" required>
+            </section>
+
+            <section class="login-opciones-enlaces">
+                <a href="./Vistas/recuperar-contraseña.html" class="link-olvido">¿Olvidaste t&uacute; contraseña?</a>
+            </section>
+
+             <button class="btn-ingresar" type="submit"> Ingresar</button> 
+
+            <hr class="divisor-login">
+
+            <section class="login-registro-invitacion">
+                <p>¿No  tienes una cuenta a&uacute;n?</p>
+                <a href="./Vistas/crear-cuenta.html" class="btn-crear-cuenta"> Crear Cuenta</a>
+            </section>
+
+           
+            
+
+        </form>
+
+
     </main>
 </body>
 

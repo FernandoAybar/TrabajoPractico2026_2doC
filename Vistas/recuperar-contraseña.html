@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos CSS/styles-login.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="../imagenes/babylon_torre_recortada.png">
+    <title>Babylon - Recuperar Contraseña</title>
+</head>
+
+<body class="login-body">
+
+    <main class="login-container">
+
+        <section class="login-marca">
+            <img class="login-logo-torre" src="../imagenes/babylon_torre_recortada.png" alt="Babylon logo">
+            <img class="login-logo-texto" src="../imagenes/babylon_text_recortado.png" alt="Texto Babylon">
+            <h1>Recuperar Contraseña</h1>
+            <p>Te enviaremos un código de verificación para restablecer tu acceso</p>
+        </section>
+
+        <form class="login-formulario" action="./dashboard.html" method="post">
+
+            <input type="checkbox" id="control-codigo" class="check-recuperar-estado">
+
+            <section class="bloque-recuperar-paso-1">
+                <section class="campo-grupo-login">
+                    <label for="usuario-recuperar">Email:</label>
+                    <input type="email" name="email" id="email-recuperar" placeholder="Ingrese su email" required>
+                </section>
+                <label for="control-codigo" class="btn-ingresar">Enviar Código</label>
+            </section>
+
+            <section class="bloque-recuperar-paso-2">
+                <section class="campo-grupo-login">
+                    <label for="codigo-recuperar">Código de Verificación:</label>
+                    <input type="text" id="codigo-recuperar" name="verification_code"
+                        placeholder="Introduce el código de 6 dígitos" maxlength="6" minlength="6" required>
+                </section>
+                <button class="btn-ingresar" type="submit">Verificar y Acceder</button>
+            </section>
+
+            <hr class="divisor-login">
+
+            <section class="login-registro-invitacion">
+                <a href="../index.html" class="btn-crear-cuenta">Volver al Login</a>
+            </section>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>
