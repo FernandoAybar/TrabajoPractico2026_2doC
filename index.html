@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./estilos CSS/styles-login.css">
     <link rel="icon" type="image/png" href="./imagenes/babylon_torre_recortada.png">
     <title>Babylon - Inicio Sesi&oacute;n</title>
@@ -16,7 +15,7 @@
 
 <body class="login-body">
 
-    <main class="login-conteiner">
+    <main class="login-container">
 
         <section class="login-marca">
             <img src="./imagenes/babylon_torre_recortada.png" alt="Babylon Torre Logo" class="login-logo-torre">
@@ -25,9 +24,7 @@
             <p>Aprende idiomas de forma l&uacute;dica y competitiva</p>
         </section>
 
-
-
-        <form action="./Vistas/dashboard.html" method="get" class="login-formulario" >
+        <form action="./Vistas/dashboard.html" method="get" class="login-formulario"> <!--Va post pero si no chilla netlify-->
 
             <img src="./imagenes/Individual.gif" alt="Logo" class="Logo_principal">
 
@@ -35,7 +32,6 @@
                 <label for="usuario-login">Nombre de usuario</label>
                 <input type="text" id="usuario-login" name="usuario-login" placeholder="Ingresa tu nombre de usuario" required>
             </section>
-
 
             <section class="campo-grupo-login">
                 <label for="pass">Contraseña</label>
@@ -46,7 +42,7 @@
                 <a href="./Vistas/recuperar-contraseña.html" class="link-olvido">¿Olvidaste t&uacute; contraseña?</a>
             </section>
 
-             <button class="btn-ingresar" type="submit"> Ingresar</button> 
+            <button class="btn-ingresar" type="submit"> Ingresar</button> 
 
             <hr class="divisor-login">
 
@@ -55,11 +51,7 @@
                 <a href="./Vistas/crear-cuenta.html" class="btn-crear-cuenta"> Crear Cuenta</a>
             </section>
 
-           
-            
-
         </form>
-
 
     </main>
 </body>

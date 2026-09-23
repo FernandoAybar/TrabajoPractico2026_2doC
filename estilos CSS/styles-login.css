@@ -6,7 +6,7 @@
 
 .login-body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,6 +36,7 @@
     text-align: center;
     gap: 0.3rem;
     margin-bottom: 1.8rem;
+    width: 100%;
 }
 
 .login-logo-torre {
@@ -45,37 +46,29 @@
     animation: vibrar-pausa 4s infinite;
 }
 
-
 @keyframes vibrar-pausa {
     0% {
         transform: translate(0, 0) rotate(-10deg);
     }
-
     2% {
         transform: translate(-3px, 1px) rotate(12deg);
     }
-
     4% {
         transform: translate(3px, -1px) rotate(8deg);
     }
-
     6% {
         transform: translate(-3px, -1px) rotate(11deg);
     }
-
     8% {
         transform: translate(3px, 1px) rotate(9deg);
     }
-
     10% {
         transform: translate(0, 0) rotate(10deg);
     }
-
     100% {
         transform: translate(0, 0) rotate(10deg);
     }
 }
-
 
 .login-logo-texto {
     width: auto;
@@ -99,23 +92,23 @@
 .Logo_principal {
     width: 4rem;
     height: 4rem;
-    margin: auto;
+    margin: 0 auto 1rem auto;
     background-color: #3c3c3c;
     border-radius: 50%;
-
+    display: block;
 }
 
 .login-formulario {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 0.5rem;
+    gap: 1.5rem;
 }
 
 .campo-grupo-login {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 0.5rem;
     width: 100%;
 }
 
@@ -123,11 +116,12 @@
     font-size: 1.2rem;
     font-weight: bold;
     color: #3c3c3c;
+    text-align: left;
 }
 
 .campo-grupo-login input {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.8rem 1.2rem;
     font-size: 1.3rem;
     font-family: 'Hind Vadodara', sans-serif;
     color: #3c3c3c;
@@ -167,7 +161,7 @@
     text-transform: uppercase;
     color: white;
     background-color: rgb(0, 136, 255);
-    padding: 0.6rem;
+    padding: 1rem;
     border: 0.2rem solid rgb(0, 85, 160);
     border-radius: 1.5rem;
     box-shadow: 0 0.5rem 0 rgb(0, 85, 160);
@@ -262,7 +256,6 @@
     gap: 2rem;
     width: 100%;
 }
-
 
 @media (max-width: 480px) {
     .login-body {
