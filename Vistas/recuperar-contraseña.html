@@ -24,16 +24,17 @@
             <p>Te enviaremos un código de verificación para restablecer tu acceso</p>
         </section>
 
-        <form class="login-formulario" action="./dashboard.html" method="get">
+        <form class="login-formulario" action="./confirmacion -Contraseña.html" method="get">
 
             <input type="checkbox" id="control-codigo" class="check-recuperar-estado">
-
             <section class="bloque-recuperar-paso-1">
                 <section class="campo-grupo-login">
-                    <label for="usuario-recuperar">Email:</label>
-                    <input type="email" name="email" id="email-recuperar" placeholder="Ingrese su email" required>
+                    <label for="usuario-recuperar" class="recuperar-email">Email:</label>
+                    <input type="email" class="input-email" name="usuario-recuperar" id="usuario-recuperar" placeholder="Ingrese su email" required>
+                    <span class="mensaje-error">Ingresar un email v&aacute;lido para continuar</span>
+                    <label for="control-codigo" class="btn-check">Enviar Código</label>
                 </section>
-                <label for="control-codigo" class="btn-ingresar">Enviar Código</label>
+                
             </section>
 
             <section class="bloque-recuperar-paso-2">
@@ -42,8 +43,21 @@
                     <input type="text" id="codigo-recuperar" name="verification_code"
                         placeholder="Introduce el código de 6 dígitos" maxlength="6" minlength="6" required>
                 </section>
+                <section class="campo-grupo-login">
+                    <div class="Primera-contraseña">
+                        <label for="contraseña-anadida">Nueva Contraseña</label>
+                        <input type="password" name="contraseña-añadida" id="contraseña-anadida" placeholder="Ingresa tu Contraseña" required>
+                    </div>
+                    <div class="campo-grupo-login">
+                        <label for="contraseña-anadida">Confirmar Contraseña</label>
+                        <input type="password" name="contraseña-añadida" id="contraseña-anadida" placeholder="Reitera tu Contraseña" required>
+                    </div>
+
+                </section>
                 <button class="btn-ingresar" type="submit">Verificar y Acceder</button>
             </section>
+           
+
 
             <hr class="divisor-login">
 
