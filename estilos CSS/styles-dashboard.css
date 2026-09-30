@@ -155,6 +155,129 @@ main {
     box-shadow: 0 0 0 transparent;
 }
 
+    /* INICIO-desuscribirse */
+    
+.check-baja,
+.check-eliminar {
+display: none;
+}
+
+.btn-desuscribirse {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff4b4b;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+    padding: 0.4rem 1rem;
+    border-radius: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-desuscribirse:hover {
+    background-color: #fdd5d5;
+}
+
+/* Panel de confirmación: se superpone a la tarjeta (que ya es position: relative) */
+.confirmacion-baja {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fdd5d5;
+    border: 0.2rem solid #ff4b4b;
+    border-radius: 2.5rem;
+    box-shadow: 0 0.6rem 0 #ff4b4b;
+}
+
+.check-baja:checked~.confirmacion-baja {
+    display: flex;
+}
+
+.confirmacion-baja h3 {
+    font-size: 2rem;
+    color: #ea2b2b;
+}
+
+.confirmacion-baja p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #3c3c3c;
+}
+
+.confirmacion-baja-acciones {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-cancelar-baja,
+.btn-confirmar-baja {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.8rem 1.8rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-cancelar-baja {
+    color: #3c3c3c;
+    background-color: white;
+    border: 0.2rem solid #e5e5e5;
+    box-shadow: 0 0.4rem 0 #e5e5e5;
+}
+
+.btn-confirmar-baja {
+    color: white;
+    background-color: #ff4b4b;
+    border: 0.2rem solid #c72c2c;
+    box-shadow: 0 0.4rem 0 #c72c2c;
+}
+
+.btn-cancelar-baja:hover,
+.btn-confirmar-baja:hover {
+    transform: translateY(-0.2rem);
+}
+
+.btn-cancelar-baja:active,
+.btn-confirmar-baja:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+/* Al confirmar, la tarjeta desaparece */
+.curso-idioma:has(.check-eliminar:checked) {
+    display: none;
+}
+
+/* Mensaje de "sin cursos": solo se ve si no queda ninguna tarjeta visible */
+.sin-cursos {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #afafaf;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.cursos:has(.curso-idioma:not(:has(.check-eliminar:checked)))~.sin-cursos {
+    display: none;
+}
+    
+/* FIN-desuscribirse */
+
+
 @media (min-width: 481px) and (max-width: 1024px) { /*Qiery tablet-note */
     .panel-estadisticas {
         flex-wrap: wrap;
@@ -218,5 +341,5 @@ main {
     .boton-tarjeta {
         width: 90%;
         padding: 1rem;
-    }
+    }    
 }
