@@ -527,4 +527,8 @@
         padding: 1rem 0;
         font-size: 1.4rem;
     }
+    .audio-frase {
+    width: 100%;
+    max-width: 30rem;
+    }
 }
