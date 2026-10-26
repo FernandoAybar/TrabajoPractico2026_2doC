@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 90%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgba(203, 231, 255, 0.855);
+}
+
+header {
+    width: 100%;
+}
+
+
+
+
+@media (max-width: 480px) {
+
+    /*Query mobile*/
+    body {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+  
+
+    
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+
+    /* Query tablet y notebook */
+    body {
+        width: 95%;
+    }
+
+   
+    
+}

@@ -1,0 +1,152 @@
+.footer-sitio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 8rem;
+    padding: 2rem;
+    background-color: rgb(0, 136, 255);
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    gap: 2rem;
+    margin-top: auto;
+    padding-top: 2rem;
+    font-family: 'Hind Vadodara', sans-serif;
+}
+
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-torre-footer {
+    display: block;
+    width: auto;
+    height: 4rem;
+    object-fit: contain;
+}
+
+.logo-texto-footer {
+    display: block;
+    width: auto;
+    height: 2.2rem;
+    object-fit: contain;
+}
+
+.copyright {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}
+
+.footer-redes {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.etiqueta-red {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    background-color: rgb(0, 115, 215);
+    border-radius: 1.5rem;
+    box-shadow: 0 0.4rem 0 rgb(0, 85, 160);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.img-red-social {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+}
+
+.etiqueta-red:hover {
+    background-color: rgb(0, 85, 160);
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.6rem 0 rgb(0, 66, 124);
+}
+
+.etiqueta-red:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0 0 0 transparent;
+}
+
+
+
+
+@media (max-width: 480PX){
+    .footer-sitio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .footer-marca {
+        align-items: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .logo-torre-footer {
+        height: 3.5rem;
+    }
+
+    .logo-texto-footer {
+        height: 1.8rem;
+    }
+
+    .footer-redes {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .etiqueta-red {
+        width: 80%;
+        justify-content: center;
+        font-size: 1.3rem;
+        padding: 0.8rem 0;
+    }
+}
+
+@media (min-width: 481PX) and (max-width: 1024PX){
+    .footer-sitio {
+        border-top-left-radius: 3rem;
+        border-top-right-radius: 3rem;
+        padding: 1.5rem;
+    }
+
+    .logo-torre-footer {
+        height: 3.5rem;
+    }
+
+    .logo-texto-footer {
+        height: 1.8rem;
+    }
+
+    .etiqueta-red {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+}
