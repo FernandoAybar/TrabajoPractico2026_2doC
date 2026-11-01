@@ -14,6 +14,7 @@
     font-family: 'Hind Vadodara', sans-serif;
     padding: 0.3rem 2rem;
     overflow-y: auto;
+    position: relative;
 }
 
 .login-container {
@@ -98,10 +99,11 @@
     width: 4rem;
  }
 
-
+/* ver modificar FER */
 .modificado-recuperar{
+
     position: absolute;
-    display: flex;
+    display:flex;        /*flex;*/
     flex-direction: column;
     align-items: center;
     height: 40%;
@@ -125,7 +127,7 @@
  }
 
 
-
+/* ver esto FER */ 
  .mensaje{
     position: absolute;
     display: flex;
@@ -379,6 +381,7 @@
     }
 
     .login-container {
+
         padding: 2rem 1.5rem;
         border-radius: 2rem;
         box-shadow: 0 0.6rem 0 #e5e5e5;

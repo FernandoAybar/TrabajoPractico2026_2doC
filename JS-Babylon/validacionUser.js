@@ -1,5 +1,5 @@
 
-///validaciones que solo presentan en false 
+///validaciones que solo presentan en false  (IniciarSesion.js)
 export function validarDatos(nombreUsuario, contraseña, contenedorUser, contendorPass) {
     //regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -38,4 +38,5 @@ export function validarDatos(nombreUsuario, contraseña, contenedorUser, contend
 /////////////////////////////////////////////////////////////
 
 
-/*En Proceso ALta usuarios */
+
+
