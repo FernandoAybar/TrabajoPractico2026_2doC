@@ -1,10 +1,11 @@
  export const DATOS_DE_NOTIFICACION = [
     {
         id:1,
-        titulo: "Cuenta no encontrada",
-        parrafo:"Su usuario no es un valor registrador, registrese",
+        titulo: "Su cuenta no fue encontrada",
+        parrafo:"Usuario no registrado, Favor de registrarse",
         textoBoton:"Volver al inicio de sesion",
         accionBoton:"../index.html",
+        gifDireccion:"../imagenes/Error.gif",
     },
 
     {
@@ -13,14 +14,16 @@
         parrafo:"Tu Contraseña fue restablecida correctamente ",
         textoBoton:"Volver al inicio de sesion",
         accionBoton:"../index.html",
+        gifDireccion:"../imagenes/Review.gif",
     },
 
     {
         id:3,
         titulo:"Cuenta Creada",
-        parrafo:"Su cuenta ha sido Credada con exito",
+        parrafo:"Su cuenta ha sido creada con exito",
         textoBoton:"Volver al inicio de sesion",
         accionBoton:"../index.html",
+        gifDireccion:"../imagenes/Review.gif",
     },
 
     {
@@ -29,6 +32,16 @@
         parrafo:"Sus datos fueron modificados",
         textoBoton:"Continuar",
         accionBoton:"./mi-perfil.html",
+        gifDireccion:"../imagenes/Review.gif",
     },
+
+    {
+        id:5,
+        titulo:"Acceso Correcto",
+        parrafo:"Bienveniedo",
+        textoBoton:"Continuar",
+        accionBoton:"./Vistas/dashboard.html",
+        gifDireccion:"../imagenes/Review.gif",
+    }
 
 ]

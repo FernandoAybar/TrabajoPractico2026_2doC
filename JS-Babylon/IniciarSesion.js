@@ -22,6 +22,7 @@ formularioInicioSesion.addEventListener('input', (f) => {
 ///busqueda de login 
 formularioInicioSesion.addEventListener('submit', (e) => {
     e.preventDefault();
+    let valorCuenta=0;
     const nombreUsuario = document.getElementById('usuario-login').value;
     const contraseña = document.getElementById('pass').value;
 
@@ -30,13 +31,19 @@ formularioInicioSesion.addEventListener('submit', (e) => {
     const usuarioEncontrado = usuarios.find(f => f.email === nombreUsuario && f.password === contraseña);
 
     if (!usuarioEncontrado) {
-        let valorCuenta = 1;
+        valorCuenta = 1;
         windowsNotificacion(valorCuenta);
 
         return
     }
+    else{
 
     sessionStorage.setItem('sesionActiva', JSON.stringify(usuarioEncontrado));
+    valorCuenta=5;
+    windowsNotificacion(valorCuenta);
+    }
+
+    
 
     //ver esto
     cargarDashboard(usuarioEncontrado);

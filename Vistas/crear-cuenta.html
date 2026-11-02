@@ -23,31 +23,36 @@
             <p>Únete a la comunidad de idiomas de Babylon</p>
         </section>
  
-        <form class="login-formulario" action="./confirmacion-creacionDeCuenta.html" method="get">
+        <form class="login-formulario" id="login-formulario-regis" action="./confirmacion-creacionDeCuenta.html" method="get">
             
             <section class="campo-grupo-login">
                 <label for="nombre-registro">Nombre completo:</label>
                 <input type="text" id="nombre-registro" name="fullname" placeholder="Ingresa tu nombre y apellido" required>
+                <p id="campo-Nombre-usuario"></p>
             </section>
  
             <section class="campo-grupo-login">
                 <label for="usuario-registro">Nombre de usuario:</label>
                 <input type="text" id="usuario-registro" name="username" placeholder="Crea tu usuario_web" required>
+                <p id="campo-Nombre-usuario-com"></p>
             </section>
  
             <section class="campo-grupo-login">
                 <label for="email-registro">Email institucional:</label>
                 <input type="email" id="email-registro" name="email" placeholder="ejemplo@alumnos.unlam.edu.ar" required>
+                <p id="campo-email"></p>
             </section>
  
             <section class="campo-grupo-login">
                 <label for="password-registro">Contraseña:</label>
                 <input type="password" id="password-registro" name="password" placeholder="Mínimo 8 caracteres" required>
+                <p id="contraseña-etique"></p>
             </section>
  
             <section class="campo-grupo-login">
                 <label for="confirm-password-registro">Confirmar contraseña:</label>
                 <input type="password" id="confirm-password-registro" name="confirm_password" placeholder="Repite tu contraseña" required>
+                <p id="contraseña-etique-2"></p>
             </section>
  
             <button class="btn-ingresar" type="submit"> Registrarse</button> 
@@ -65,4 +70,5 @@
  
 </body>
  
+<script type="module" src="../JS-Babylon/registrarse.js"></script>
 </html>
