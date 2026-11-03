@@ -1,38 +1,65 @@
 
 ///validaciones que solo presentan en false  (IniciarSesion.js)
-export function validarDatos(nombreUsuario, contraseña, contenedorUser, contendorPass) {
+export function validarDatos( emailUsuario,contenedorEmail, contraseña,contenedorContraseña,nombreUsuario,contenedorNomUser,
+                                nombreUsuarioComple,contenedorNomUserCom,contraseñaConfirmada, contenedorContraseña2) {
     //regex
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
 
-    if ((nombreUsuario.trim()!=="")  && !emailRegex.test(nombreUsuario)) {
+       
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    const nombreRegex= /^[A-Za-z\s]+$/;
+
+
+    ///valida emal///
+    if ((emailUsuario.trim()!=="")  && !emailRegex.test(emailUsuario)) {
         /*const nuevaEtiqueta = document.createElement('p');*/
 
-        contenedorUser.textContent = " El mail no tiene el formato valido";
+        contenedorEmail.textContent = " El mail no tiene el formato valido";
         /*console.log("el email no tiene el formato valido");*/
-        contenedorUser.style.fontSize = "0.8rem";
-        contenedorUser.style.color = "red";
-        contenedorUser.style.display= "block";
+        contenedorEmail.style.fontSize = "0.8rem";
+        contenedorEmail.style.color = "red";
+        contenedorEmail.style.display= "block";
         /*contenedorUser.appendChild(nuevaEtiqueta);
         return false;*/
     }
     else{
-        contenedorUser.style.display= "none";
+        contenedorEmail.style.display= "none";
     }
-
+    // valida contraseña//
     if ((contraseña.trim()!=="")  && !passwordRegex.test(contraseña)) {
        /* const nuevaetiquetaPass = document.createElement('p');*/
-        contendorPass.textContent = "la contraseña no cumple los requisitos (8 caracteres, min 1 mayus, 1 minus,algun numero)";
-        contendorPass.style.color = "red";
-        contendorPass.style.fontSize = "0.8rem";
-        contendorPass.style.display="block";
+        contenedorContraseña.textContent = "la contraseña no cumple los requisitos (8 caracteres, min 1 mayus, 1 minus,algun numero)";
+        contenedorContraseña.style.color = "red";
+        contenedorContraseña.style.fontSize = "0.8rem";
+        contenedorContraseña.style.display="block";
         /*contendorPass.appendChild(nuevaetiquetaPass);*/
         /*console.log("la contraseña no cumple los requisitos");
         return false;*/
     }
     else{
-        contendorPass.style.display="none";
+        contenedorContraseña.style.display="none";
     }
+    ///valida nombre de usuario completo///
+    if(nombreUsuarioComple.length>25) {
+        contenedorNomUserCom.textContent = "El nombre de usuario excede de 25 caracteres";
+        contenedorNomUserCom.style.color = "red";
+        contenedorNomUserCom.style.fontSize = "0.8rem";
+        contenedorNomUserCom.style.display="block";
+    }
+        else if ((nombreUsuarioComple!=="") && !nombreRegex.test(nombreUsuarioComple)) {
+        contenedorNomUserCom.textContent = "Los carectes no son apropiados(letras Mayusculas y Minusculas son validas";
+        contenedorNomUserCom.style.color = "red";
+        contenedorNomUserCom.style.fontSize = "0.8rem";
+        contenedorNomUserCom.style.display="block";
+    }
+    else{
+        contenedorNomUserCom.style.display="none";
+    }
+
+    ///valida nombre de usuario corto
+
+
+
 }
 
 /////////////////////////////////////////////////////////////

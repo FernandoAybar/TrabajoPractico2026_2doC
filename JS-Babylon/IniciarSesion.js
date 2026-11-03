@@ -13,7 +13,7 @@ formularioInicioSesion.addEventListener('input', (f) => {
     const contraseña = document.getElementById('pass').value.trim();
     let contenedorUser = document.getElementById('campo-usuario');
     let contendorPass = document.getElementById('campo-contraseña');
-    validarDatos(nombreUsuario, contraseña, contenedorUser, contendorPass);
+    validarDatos(nombreUsuario, contenedorUser,  contraseña, contendorPass);
 
     //consul por el eventdefault
 
