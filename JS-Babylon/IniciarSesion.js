@@ -28,7 +28,7 @@ formularioInicioSesion.addEventListener('submit', (e) => {
 
     let usuarios = JSON.parse(localStorage.getItem('usuariosRegistrados')) || [];
 
-    const usuarioEncontrado = usuarios.find(f => f.email === nombreUsuario && f.password === contraseña);
+    const usuarioEncontrado = usuarios.find(f => f.email === nombreUsuario && f.contraseña === contraseña);
 
     if (!usuarioEncontrado) {
         valorCuenta = 1;

@@ -1,16 +1,16 @@
  export const DATOS_DE_NOTIFICACION = [
     {
         id:1,
-        titulo: "Su cuenta no fue encontrada",
+        titulo: "SU CUENTA NO FUE ENCONTRADA",
         parrafo:"Usuario no registrado, Favor de registrarse",
         textoBoton:"Volver al inicio de sesion",
-        accionBoton:"../index.html",
-        gifDireccion:"../imagenes/Error.gif",
+        accionBoton:"./index.html",
+        gifDireccion:"./imagenes/Error.gif",
     },
 
     {
         id:2,
-        titulo:"Contraña restablecida",
+        titulo:"CONTRASEÑA RESTABLECIDA",
         parrafo:"Tu Contraseña fue restablecida correctamente ",
         textoBoton:"Volver al inicio de sesion",
         accionBoton:"../index.html",
@@ -19,7 +19,7 @@
 
     {
         id:3,
-        titulo:"Cuenta Creada",
+        titulo:"CUENTA CREADA",
         parrafo:"Su cuenta ha sido creada con exito",
         textoBoton:"Volver al inicio de sesion",
         accionBoton:"../index.html",
@@ -28,7 +28,7 @@
 
     {
         id:4,
-        titulo:"Registros modificados",
+        titulo:"REGISTROS MODIFICADOS",
         parrafo:"Sus datos fueron modificados",
         textoBoton:"Continuar",
         accionBoton:"./mi-perfil.html",
@@ -37,11 +37,21 @@
 
     {
         id:5,
-        titulo:"Acceso Correcto",
+        titulo:"ACCESO CORRECTO",
         parrafo:"Bienveniedo",
         textoBoton:"Continuar",
         accionBoton:"./Vistas/dashboard.html",
         gifDireccion:"../imagenes/Review.gif",
+    },
+
+    {
+        id:6,
+        titulo:"NO ES POSIBLE",
+        parrafo:"Esta cuenta se encuentra registrada",
+        textoBoton:"Volver al inicio",
+        accionBoton:"../index.html",
+        gifDireccion:"./imagenes/Error.gif",
+
     }
 
 ]

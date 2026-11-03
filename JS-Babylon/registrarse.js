@@ -1,9 +1,11 @@
 import { validarDatos } from "./validacionUser.js";
 import { windowsNotificacion } from "./notificaciones.js";
+import { Usuario } from "./usuario.js";
 
 
 const formularioDeRegristro = document.getElementById('login-formulario-regis');
 
+let valorCuenta=0;
 //validamos datos
 
 formularioDeRegristro.addEventListener('input', (f) => {
@@ -22,6 +24,38 @@ formularioDeRegristro.addEventListener('input', (f) => {
 
     validarDatos(emailUsuario, contenedorEmail, contraseña, contenedorContraseña, nombreUsuario, contenedorNomUser,
         nombreUsuarioComple, contenedorNomUserCom, contraseñaConfirmada, contenedorContraseña2);
+
+
+});
+
+
+/// Busque  y registro de nuevo usuario
+
+formularioDeRegristro.addEventListener('submit', (e) =>{
+e.preventDefault();
+
+
+    const nombreUsuarioComple = document.getElementById('nombre-registro').value;
+    const nombreUsuario = document.getElementById('usuario-registro').value.trim();
+    const emailUsuario = document.getElementById('email-registro').value.trim();
+    const contraseña = document.getElementById('password-registro').value.trim();
+    const contraseñaConfirmada = document.getElementById('confirm-password-registro').value.trim();
+
+    let usuarios = JSON.parse(localStorage.getItem('usuariosRegistrados')) || [];
+
+    const USUARIO_ENCONTRADO=   usuarios.find(f=> f.email===emailUsuario && f.contraseña===contraseña);
+
+    if(USUARIO_ENCONTRADO){
+        valorCuenta=6;
+        windowsNotificacion(valorCuenta);
+        return;
+    }
+    else{
+        valorCuenta=3;
+        windowsNotificacion(valorCuenta);
+    }
+
+
 
 
 });
