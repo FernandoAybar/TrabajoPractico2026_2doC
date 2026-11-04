@@ -50,7 +50,7 @@
         parrafo:"Esta cuenta se encuentra registrada",
         textoBoton:"Volver al inicio",
         accionBoton:"../index.html",
-        gifDireccion:"./imagenes/Error.gif",
+        gifDireccion:"../imagenes/Error.gif",
 
     }
 

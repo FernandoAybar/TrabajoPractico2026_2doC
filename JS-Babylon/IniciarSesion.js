@@ -26,7 +26,7 @@ formularioInicioSesion.addEventListener('submit', (e) => {
     const nombreUsuario = document.getElementById('usuario-login').value;
     const contraseña = document.getElementById('pass').value;
 
-    let usuarios = JSON.parse(localStorage.getItem('usuariosRegistrados')) || [];
+    let usuarios = JSON.parse(localStorage.getItem("usuariosRegistrados")) || [];
 
     const usuarioEncontrado = usuarios.find(f => f.email === nombreUsuario && f.contraseña === contraseña);
 
@@ -38,7 +38,7 @@ formularioInicioSesion.addEventListener('submit', (e) => {
     }
     else{
 
-    sessionStorage.setItem('sesionActiva', JSON.stringify(usuarioEncontrado));
+    sessionStorage.setItem('sesionActiva', JSON.stringify("usuarioEncontrado"));
     valorCuenta=5;
     windowsNotificacion(valorCuenta);
     }

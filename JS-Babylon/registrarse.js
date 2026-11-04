@@ -41,9 +41,14 @@ e.preventDefault();
     const contraseña = document.getElementById('password-registro').value.trim();
     const contraseñaConfirmada = document.getElementById('confirm-password-registro').value.trim();
 
-    let usuarios = JSON.parse(localStorage.getItem('usuariosRegistrados')) || [];
+    if(contraseña!==contraseñaConfirmada){
+        return
+    }
 
-    const USUARIO_ENCONTRADO=   usuarios.find(f=> f.email===emailUsuario && f.contraseña===contraseña);
+
+    let usuarios = JSON.parse(localStorage.getItem("usuariosRegistrados")) || [];
+
+    const USUARIO_ENCONTRADO=  usuarios.find(f=> f.email===emailUsuario );
 
     if(USUARIO_ENCONTRADO){
         valorCuenta=6;
@@ -51,6 +56,13 @@ e.preventDefault();
         return;
     }
     else{
+
+        const usuarioRegistrado=new Usuario(nombreUsuarioComple,nombreUsuario,emailUsuario,contraseña);
+        console.log("valores del formulario:", nombreUsuarioComple, nombreUsuario,emailUsuario,contraseña);
+        usuarios.push(usuarioRegistrado);
+
+        localStorage.setItem("usuariosRegistrados",JSON.stringify(usuarios));
+        sessionStorage.setItem("usuariosRegistrados",JSON.stringify(usuarios));
         valorCuenta=3;
         windowsNotificacion(valorCuenta);
     }
